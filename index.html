@@ -57,11 +57,12 @@
          --name-small: clamp(23px, 3.2vw, 36px);
 
          /* Where the name/photo row sits when the page is at the very top */
-         --start: clamp(44px, 11vh, 110px);
-         --hero-h: calc(var(--start) + var(--avatar-big) + 56px + 250px);
+         --start: clamp(28px, 6vh, 64px);
+         --intro-h: 100px;
+         --hero-h: calc(var(--start) + var(--avatar-big) + 36px + var(--intro-h) + var(--sheet-radius) + 16px);
       }
       @supports (height: 1svh) {
-         :root { --start: clamp(44px, 11svh, 110px); }
+         :root { --start: clamp(28px, 6svh, 64px); }
       }
 
       /* ------------------------------------------------------------------
@@ -96,6 +97,7 @@
          body { overflow-x: clip; }
       }
       img { max-width: 100%; display: block; }
+      ::selection { background: #bae6fd; color: #0c4a6e; }
       a { color: var(--accent-deep); text-decoration: none; }
       a:hover { color: var(--accent); }
       :focus-visible { outline: 3px solid #38bdf8; outline-offset: 3px; border-radius: 6px; }
@@ -143,18 +145,19 @@
 
       .hero-intro {
          position: absolute; left: 0; right: 0;
-         top: calc(var(--start) + var(--avatar-big) + 56px);
+         top: calc(var(--start) + var(--avatar-big) + 36px);
       }
+      .hero-intro .wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
       .hero-subtitle {
          margin: 0;
-         max-width: 36ch;
+         max-width: 80ch;
          font-size: clamp(16px, 1.9vw, 21px);
          line-height: 1.6;
          color: rgba(255,255,255,.9);
       }
       .hero-cta {
          display: inline-flex; align-items: center; gap: 12px;
-         margin-top: 22px; padding: 12px 20px;
+         flex: none; padding: 12px 20px;
          color: #fff; font-size: 14px; font-weight: 600;
          border: 1px solid rgba(255,255,255,.5);
          border-radius: 999px;
@@ -226,14 +229,14 @@
          height: var(--avatar);
          border-radius: 50%;
          pointer-events: auto;
-         background: #cbd5e1;
-         border: 3px solid rgba(255,255,255,.92);
+         padding: 3px;
+         background: linear-gradient(135deg, #7dd3fc, #a5b4fc 55%, #f5d0fe);   /* soft gradient ring */
          box-shadow: 0 14px 40px rgba(6,18,32,.35), 0 0 0 1px rgba(6,18,32,.08);
          overflow: hidden;
          transition: box-shadow .3s ease, transform .3s ease;
       }
       .avatar:hover { transform: scale(1.04); box-shadow: 0 18px 48px rgba(6,18,32,.42), 0 0 0 1px rgba(6,18,32,.08); }
-      .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+      .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: #cbd5e1; border: 2px solid rgba(255,255,255,.95); }
 
       /* Over the white page: dark text instead of white */
       .on-light .identity { --fg: var(--ink); --kicker: var(--accent-deep); }
@@ -284,7 +287,7 @@
          position: relative;
          z-index: 2;
          margin-top: calc(var(--sheet-radius) * -1);
-         padding-block: clamp(56px, 8vw, 88px) 40px;
+         padding-block: clamp(36px, 5vw, 56px) clamp(56px, 8vw, 96px);
          border-radius: var(--sheet-radius) var(--sheet-radius) 0 0;
          background:
             radial-gradient(900px 340px at 85% -80px, rgba(14,165,233,.10), transparent 70%),
@@ -360,8 +363,19 @@
       .status.accepted { color: #166534; background: #dcfce7; }
       .status.revision { color: #92400e; background: #fef3c7; }
 
-      /* Footer */
-      .footer { margin: clamp(56px, 8vw, 96px) 0 0; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; font-size: 13px; color: var(--muted); }
+      /* Reading progress line */
+      .progress {
+         position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70;
+         background: linear-gradient(90deg, #38bdf8, #818cf8, #e879f9);
+         transform: scaleX(var(--prog, 0)); transform-origin: 0 50%;
+         pointer-events: none;
+      }
+      .js .progress { will-change: transform; }
+
+      /* Gentle fade-up as things scroll into view */
+      .js .reveal { opacity: 0; }
+      .js .reveal.in { opacity: 1; animation: rise .7s cubic-bezier(.2,.7,.2,1) backwards; animation-delay: var(--d, 0s); }
+      @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 
       /* Back to top */
       .back-to-top {
@@ -379,7 +393,8 @@
          Small screens
       ------------------------------------------------------------------ */
       @media (max-width: 640px) {
-         :root { --sheet-radius: 26px; }
+         :root { --sheet-radius: 26px; --intro-h: 118px; }
+         .hero-intro .wrap { gap: 16px; }
          .cover { background-position: 58% center; }
          .identity h1 { letter-spacing: -.04em; }
          .kicker { display: none; }
@@ -393,6 +408,7 @@
          html { scroll-behavior: auto; }
          *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
          .cover { transform: none; }
+         .js .reveal, .js .reveal.in { opacity: 1; animation: none; }
       }
    </style>
 </head>
@@ -403,6 +419,7 @@
    <!-- End Google Tag Manager (noscript) -->
 
    <a class="skip-link" href="#about">Skip to content</a>
+   <div class="progress" aria-hidden="true"></div>
 
    <!-- Blurred glass that content melts into, behind the pinned name + photo -->
    <div class="veil" aria-hidden="true">
@@ -443,9 +460,9 @@
       <div class="wrap">
 
          <section class="section" id="about" aria-labelledby="about-title">
-            <p class="eyebrow">About</p>
-            <h2 id="about-title">Hello, I'm Rakesh.</h2>
-            <p class="about-text">
+            <p class="eyebrow reveal">About</p>
+            <h2 class="reveal" style="--d:.05s" id="about-title">Hello, I'm Rakesh.</h2>
+            <p class="about-text reveal" style="--d:.1s">
                Currently studying CS at <a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank" rel="noopener noreferrer">UBuffalo</a>.
                I spent a wonderful time as a Research Associate at <a href="https://cvpru.isical.ac.in/" target="_blank" rel="noopener noreferrer">CVPRU</a>,
                the Computer Vision and Pattern Recognition Unit of <a href="https://www.isical.ac.in/" target="_blank" rel="noopener noreferrer">Indian Statistical Institute, Kolkata</a>, India.
@@ -453,14 +470,14 @@
                I am fortunate to have <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a> as my supervisor at ISI!
             </p>
 
-            <ul class="chips" aria-label="Research interests">
+            <ul class="chips reveal" style="--d:.18s" aria-label="Research interests">
                <li>Machine Learning</li>
                <li>Computer Vision</li>
                <li>Pattern Recognition</li>
                <li>Healthcare Applications</li>
             </ul>
 
-            <ul class="links" aria-label="Contact and profiles">
+            <ul class="links reveal" style="--d:.25s" aria-label="Contact and profiles">
                <li><a href="mailto:id.rakeshdey@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a></li>
                <li><a href="data/RakeshDey_CV.pdf"><i class="ai ai-cv-square" aria-hidden="true"></i>CV</a></li>
                <li><a href="https://www.linkedin.com/in/rakesh-dey-161149179/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
@@ -469,29 +486,29 @@
          </section>
 
          <section class="section" id="research" aria-labelledby="research-title">
-            <p class="eyebrow">Research</p>
-            <h2 id="research-title">Research Projects and Related Publications</h2>
+            <p class="eyebrow reveal">Research</p>
+            <h2 class="reveal" style="--d:.05s" id="research-title">Research Projects and Related Publications</h2>
 
             <div class="cards">
-               <article class="card">
+               <article class="card reveal" style="--d:0.00s">
                   <h3>SFTT: A Spatial-Frequency-Temporal-Based End-to-End Transformer for Heart Rate Estimation</h3>
                   <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
                   <p class="status revision"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i><span>Acceptance subject to minor revision in IEEE Transactions on Emerging Topics in Computational Intelligence</span></p>
                </article>
 
-               <article class="card">
+               <article class="card reveal" style="--d:0.09s">
                   <h3>Blood Oxygen Saturation Measurement: A Survey</h3>
                   <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
                   <p class="status accepted"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Accepted in Artificial Intelligence and Applications</span></p>
                </article>
 
-               <article class="card">
+               <article class="card reveal" style="--d:0.00s">
                   <h3>A New StyleGAN Latent Space based Model for Image Style Transfer</h3>
                   <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
                   <p class="status accepted"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Accepted in International Conference on Pattern Recognition</span></p>
                </article>
 
-               <article class="card">
+               <article class="card reveal" style="--d:0.09s">
                   <h3>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</h3>
                   <p class="meta"><strong>Supervisors:</strong>
                      <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a>,
@@ -501,10 +518,6 @@
                </article>
             </div>
          </section>
-
-         <footer class="footer">
-            Template credit: <a href="https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Dr. Jon Barron</a>
-         </footer>
       </div>
    </main>
 
@@ -526,12 +539,15 @@
       let sheetTop = 0;           // document Y of the white sheet's top edge
       let ticking = false;
       let lastLight = null;
+      let maxScroll = 1;
+      const progress = document.querySelector('.progress');
 
       const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
       function measure() {
          startPx  = anchor.offsetTop;
          sheetTop = sheet.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+         maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
          update();
       }
 
@@ -557,6 +573,7 @@
             lastLight = light;
          }
 
+         root.style.setProperty('--prog', clamp(y / maxScroll, 0, 1).toFixed(4));
          toTop.classList.toggle('is-visible', y > 480);
       }
 
@@ -578,6 +595,17 @@
       toTop.addEventListener('click', () => {
          window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
       });
+
+      // Reveal-on-scroll (falls back to showing everything if unsupported)
+      const items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+         const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+         }, { rootMargin: '0px 0px -2% 0px', threshold: 0.05 });
+         items.forEach(el => io.observe(el));
+      } else {
+         items.forEach(el => el.classList.add('in'));
+      }
 
       measure();
    })();
