@@ -183,14 +183,21 @@
       .cover {
          position: absolute; inset: 0;
          background-color: #142536;
-         background-image:
-            linear-gradient(115deg, rgba(6,18,32,.78), rgba(6,18,32,.12) 72%),
-            linear-gradient(0deg, rgba(6,18,32,.55), transparent 55%),
-            url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=80");
-         background-size: cover;
-         background-position: center 48%;
          transform: translate3d(0, calc(var(--scroll, 0) * .28px), 0);   /* gentle parallax */
          will-change: transform;
+      }
+      .cover img {
+         position: absolute; inset: 0;
+         width: 100%; height: 100%;
+         object-fit: cover;
+         object-position: center 48%;      /* which part of the photo stays visible */
+      }
+      /* Dark gradients on top of the photo keep the white text readable */
+      .cover::after {
+         content: ""; position: absolute; inset: 0;
+         background:
+            linear-gradient(115deg, rgba(6,18,32,.78), rgba(6,18,32,.12) 72%),
+            linear-gradient(0deg, rgba(6,18,32,.55), transparent 55%);
       }
       .hero-anchor { position: absolute; top: var(--start); left: 0; width: 0; height: 0; pointer-events: none; }
 
@@ -541,7 +548,7 @@
       @media (max-width: 640px) {
          :root { --sheet-radius: 26px; --intro-h: 118px; }
          .hero-intro .wrap { gap: 16px; }
-         .cover { background-position: 58% center; }
+         .cover img { object-position: 58% center; }
          .identity h1 { letter-spacing: -.04em; }
          .kicker { display: none; }
          .links a { padding: 9px 15px; }
@@ -555,7 +562,9 @@
          .tl-dot { left: 0; }
          .tl-toggle { padding: 16px 16px; gap: 10px; }
          .tl-body { padding: 0 16px 20px; }
-         .tl-when { display: none; }
+         .tl-toggle { grid-template-columns: minmax(0, 1fr) auto; }
+         .tl-chev { grid-column: 2; grid-row: 1; }
+         .tl-when { grid-column: 1; grid-row: 2; justify-self: start; }
       }
 
       /* ------------------------------------------------------------------
@@ -587,7 +596,9 @@
    </div>
 
    <header class="hero" id="top">
-      <div class="cover" role="img" aria-label="Cover photograph"></div>
+      <div class="cover" aria-hidden="true">
+         <img src="images/banner.jpg" alt="" decoding="async" fetchpriority="high">
+      </div>
       <div class="hero-anchor" id="heroAnchor"></div>
 
       <div class="hero-intro">
