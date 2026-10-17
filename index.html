@@ -1,911 +1,586 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta name="google-site-verification" content="mzyi5h_x1DvmnvvOynztP5h3mA2mdBpUjfhySMB9NNI" />
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NS48J6H');</script>
-      <!-- End Google Tag Manager -->
+<head>
+   <meta charset="UTF-8">
+   <meta name="google-site-verification" content="mzyi5h_x1DvmnvvOynztP5h3mA2mdBpUjfhySMB9NNI">
 
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Rakesh Dey | Machine Learning Researcher</title>
-      <meta name="author" content="Rakesh Dey  | Machine Learning Researcher & Maths Enthusiast">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/css" href="stylesheet.css">
-      <!-- <link rel="stylesheet" href="fontawesome.all.min.css"> -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="icon" type="image/png" href="images/Rakesh_dp.jpg">
-      <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+   <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-NS48J6H');</script>
+   <!-- End Google Tag Manager -->
 
+   <!-- Lets CSS know JavaScript is available (the scroll effects need it; the page still works without it) -->
+   <script>document.documentElement.classList.add('js');</script>
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <!-- Need to change ############## -->
-      <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NS48J6H"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         
-         gtag('config', 'GTM-NS48J6H');
-      </script> -->
-      <!-- Need to change ############## -->
+   <title>Rakesh Dey | Machine Learning Researcher</title>
+   <meta name="author" content="Rakesh Dey | Machine Learning Researcher & Maths Enthusiast">
+   <meta name="description" content="Rakesh Dey - computer science student at the University at Buffalo and former Research Associate at ISI Kolkata, working on machine learning and computer vision.">
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+   <meta name="theme-color" content="#142536">
+   <meta name="color-scheme" content="light">
+   <meta property="og:title" content="Rakesh Dey | Machine Learning Researcher">
+   <meta property="og:description" content="Researcher exploring learning, representation, and intelligent systems.">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="images/Rakesh_dp.jpg">
 
-      <style>
-         :root {
-            --hero-height: 66.666vh;
-            --ink: #17212b;
-            --muted: #536273;
-            --accent: #7dd3fc;
-         }
-         html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-         body { margin: 0; color: var(--ink); background: #fff; }
-         .profile-hero {
-            height: var(--hero-height);
-            min-height: 460px;
-            max-height: 820px;
-            position: sticky;
-            top: 0;
-            isolation: isolate;
-            overflow: visible;
-            color: #fff;
-            background: #142536;
-            z-index: 0;
-         }
-         .cover-photo {
-            position: absolute; inset: 0;
-            background-image:
-               linear-gradient(115deg, rgba(6, 18, 32, .72), rgba(6, 18, 32, .10) 68%),
-               url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=85");
-            background-size: cover;
-            background-position: center 48%;
-            transform: scale(1.02);
-            transition: transform .7s ease;
-            z-index: -2;
-         }
-         .profile-hero:hover .cover-photo { transform: scale(1.045); }
-         .cover-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(0deg, rgba(8, 20, 32, .48), transparent 52%);
-         }
-         .hero-content {
-            position: fixed;
-            left: clamp(28px, 9vw, 140px);
-            top: 33.333vh;
-            transform: translateY(-50%);
-            max-width: min(720px, 62vw);
-            padding: 24px 0 30px;
-            z-index: 12;
-            will-change: top;
-            isolation: isolate;
-         }
-         .hero-content::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            inset: -18px -24px;
-            border: 1px solid rgba(255,255,255,.18);
-            border-radius: 26px;
-            background: rgba(255,255,255,.10);
-            backdrop-filter: blur(18px) saturate(150%);
-            -webkit-backdrop-filter: blur(18px) saturate(150%);
-            opacity: 0;
-            transition: opacity .25s ease;
-            pointer-events: none;
-         }
-         .hero-content.is-glass::before { opacity: 1; }
-         .hero-kicker {
-            font-size: 12px; letter-spacing: .22em; font-weight: 700;
-            margin: 0 0 18px; color: #bae6fd;
-         }
-         .hero-content h1 {
-            font-size: clamp(46px, 7vw, 88px); line-height: .98;
-            letter-spacing: -.055em; margin: 0 0 18px; color: #fff;
-            font-weight: 750;
-         }
-         .hero-subtitle {
-            max-width: 540px; margin: 0; color: rgba(255,255,255,.88);
-            font-size: clamp(16px, 2vw, 21px); line-height: 1.65;
-         }
-         .hero-scroll-link {
-            display: inline-flex; align-items: center; gap: 12px;
-            margin-top: 30px; padding: 12px 17px;
-            color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.55);
-            border-radius: 999px; font-size: 14px;
-            background: rgba(255,255,255,.08); backdrop-filter: blur(8px);
-            transition: background .2s ease, transform .2s ease;
-         }
-         .hero-scroll-link:hover { background: rgba(255,255,255,.2); transform: translateY(2px); }
-         .hero-profile-wrap {
-            position: fixed;
-            z-index: 13;
-            width: clamp(118px, 15vw, 190px);
-            aspect-ratio: 1;
-            right: clamp(32px, 9vw, 140px);
-            top: calc(var(--hero-height) - 24px);
-            transform: translateY(-50%);
-            border-radius: 50%;
-            padding: 7px;
-            background: rgba(255,255,255,.72);
-            border: 1px solid rgba(255,255,255,.75);
-            box-shadow: 0 14px 38px rgba(15, 23, 42, .22);
-            backdrop-filter: blur(20px) saturate(160%);
-            -webkit-backdrop-filter: blur(20px) saturate(160%);
-            transition: box-shadow .25s ease, background .25s ease;
-            will-change: top;
-         }
-         .hero-profile-wrap:hover {
-            box-shadow: 0 18px 45px rgba(15, 23, 42, .3);
-            background: rgba(255,255,255,.88);
-         }
-         .hero-profile-link, .hero-profile-photo { display: block; width: 100%; height: 100%; }
-         .hero-profile-photo { object-fit: cover; border-radius: 50%; border: 1px solid #e5e7eb; }
-         .hero-bottom-fade {
-            position: absolute; bottom: -1px; left: 0; right: 0; height: 80px;
-            background: linear-gradient(0deg, rgba(255,255,255,.12), transparent);
-            pointer-events: none;
-         }
-         .profile-transition-spacer {
-            height: 0;
-            margin: 0;
-            padding: 0;
-            pointer-events: none;
-         }
-         .profile-content {
-            position: relative;
-            z-index: 2;
-            margin: 0;
-            background: rgba(255,255,255,.96);
-            box-shadow: 0 -18px 45px rgba(12, 24, 36, .08);
-            backdrop-filter: blur(24px) saturate(140%);
-            -webkit-backdrop-filter: blur(24px) saturate(140%);
-            min-height: 100vh;
-         }
-         /* Existing page content remains centered and readable below the new cover. */
-         .profile-content > table:first-of-type { margin-top: 0 !important; }
-         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type {
-            padding-top: 0;
-         }
-         /* The portrait now lives on the cover/content boundary, so avoid a duplicate below. */
-         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type > tbody > tr:first-child > td:nth-child(2) {
-            display: none;
-         }
-         .profile-content name { display: none; }
-         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type > tbody > tr:first-child > td:first-child {
-            width: 100% !important;
-         }
-         .profile-content table { max-width: 1000px; }
-         .profile-content a { transition: color .18s ease; }
-         .profile-content a:hover { color: #0369a1; }
-         .back-to-top {
-            position: fixed; right: 24px; bottom: 24px; z-index: 20;
-            width: 46px; height: 46px; border: 0; border-radius: 50%;
-            color: #fff; background: #142536; box-shadow: 0 6px 20px rgba(15,23,42,.2);
-            cursor: pointer; opacity: 0; pointer-events: none;
-            transform: translateY(10px); transition: opacity .25s ease, transform .25s ease;
-         }
-         .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-         .back-to-top:hover { background: #075985; }
-         @media (max-width: 640px) {
-            :root { --hero-height: 66.666svh; }
-            .profile-hero { min-height: 500px; }
-            .cover-photo { background-position: 57% center; }
-            .hero-content { left: 20px; right: 20px; top: 29vh; max-width: calc(100vw - 40px); }
-            .hero-content h1 { font-size: clamp(39px, 11vw, 58px); }
-            .hero-subtitle { max-width: 390px; font-size: 15px; }
-            .hero-profile-wrap { right: 22px; width: 112px; top: calc(var(--hero-height) - 12px); }
-            .hero-content::before { inset: -12px -14px; border-radius: 20px; }
-            .back-to-top { right: 16px; bottom: 16px; }
-         }
-         @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-         }
-      </style>
+   <link rel="icon" type="image/jpeg" href="images/Rakesh_dp.jpg">
 
-   </head>
-   <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS48J6H"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-      <!-- Interactive cover / profile transition -->
-      <header class="profile-hero" id="profileHero">
-         <div class="cover-photo" role="img" aria-label="Cover photograph">
-            <div class="cover-overlay"></div>
-         </div>
-         <div class="hero-content">
-            <p class="hero-kicker">MACHINE LEARNING · COMPUTER VISION</p>
-            <h1>Rakesh Dey</h1>
+   <style>
+      /* ------------------------------------------------------------------
+         Design tokens
+      ------------------------------------------------------------------ */
+      :root {
+         --ink: #0f1b27;
+         --muted: #566577;
+         --line: #e4ebf2;
+         --accent: #0284c7;
+         --accent-deep: #0369a1;
+         --accent-soft: #e0f2fe;
+         --sheet-radius: 34px;
+
+         --gutter: clamp(20px, 5vw, 48px);
+         --maxw: 1040px;
+
+         /* Sizes at the top of the page (big) and once docked (small) */
+         --avatar-big: clamp(116px, 21vw, 236px);
+         --avatar-small: clamp(54px, 7vw, 76px);
+         --name-big: clamp(40px, 7.2vw, 92px);
+         --name-small: clamp(23px, 3.2vw, 36px);
+
+         /* Where the name/photo row sits when the page is at the very top */
+         --start: clamp(44px, 11vh, 110px);
+         --hero-h: calc(var(--start) + var(--avatar-big) + 56px + 250px);
+      }
+      @supports (height: 1svh) {
+         :root { --start: clamp(44px, 11svh, 110px); }
+      }
+
+      /* ------------------------------------------------------------------
+         Base + the "page drags sideways" fix
+      ------------------------------------------------------------------ */
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html {
+         scroll-behavior: smooth;
+         -webkit-text-size-adjust: 100%;
+         text-size-adjust: 100%;
+         overflow-x: hidden;               /* fallback */
+         overscroll-behavior-x: none;
+      }
+      @supports (overflow: clip) {
+         html { overflow-x: clip; }
+      }
+      body {
+         margin: 0;
+         min-width: 320px;
+         max-width: 100%;
+         overflow-x: hidden;               /* fallback */
+         touch-action: pan-y pinch-zoom;   /* no sideways panning on touch screens */
+         font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         color: var(--ink);
+         background: #142536;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+      }
+      @supports (overflow: clip) {
+         body { overflow-x: clip; }
+      }
+      img { max-width: 100%; display: block; }
+      a { color: var(--accent-deep); text-decoration: none; }
+      a:hover { color: var(--accent); }
+      :focus-visible { outline: 3px solid #38bdf8; outline-offset: 3px; border-radius: 6px; }
+
+      .wrap {
+         width: 100%;
+         max-width: calc(var(--maxw) + var(--gutter) * 2);
+         margin-inline: auto;
+         padding-inline: var(--gutter);
+      }
+
+      .skip-link {
+         position: fixed; left: 12px; top: 12px; z-index: 100;
+         padding: 10px 16px; border-radius: 10px;
+         background: #fff; color: var(--ink); font-weight: 600;
+         transform: translateY(-300%);
+         transition: transform .2s ease;
+      }
+      .skip-link:focus { transform: none; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+
+      /* ------------------------------------------------------------------
+         Hero (cover photo + intro text)
+      ------------------------------------------------------------------ */
+      .hero {
+         position: relative;
+         height: var(--hero-h);
+         overflow: hidden;
+         color: #fff;
+         background: #142536;
+         z-index: 0;
+      }
+      .cover {
+         position: absolute; inset: 0;
+         background-color: #142536;
+         background-image:
+            linear-gradient(115deg, rgba(6,18,32,.78), rgba(6,18,32,.12) 72%),
+            linear-gradient(0deg, rgba(6,18,32,.55), transparent 55%),
+            url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=80");
+         background-size: cover;
+         background-position: center 48%;
+         transform: translate3d(0, calc(var(--scroll, 0) * .28px), 0);   /* gentle parallax */
+         will-change: transform;
+      }
+      .hero-anchor { position: absolute; top: var(--start); left: 0; width: 0; height: 0; pointer-events: none; }
+
+      .hero-intro {
+         position: absolute; left: 0; right: 0;
+         top: calc(var(--start) + var(--avatar-big) + 56px);
+      }
+      .hero-subtitle {
+         margin: 0;
+         max-width: 36ch;
+         font-size: clamp(16px, 1.9vw, 21px);
+         line-height: 1.6;
+         color: rgba(255,255,255,.9);
+      }
+      .hero-cta {
+         display: inline-flex; align-items: center; gap: 12px;
+         margin-top: 22px; padding: 12px 20px;
+         color: #fff; font-size: 14px; font-weight: 600;
+         border: 1px solid rgba(255,255,255,.5);
+         border-radius: 999px;
+         background: rgba(255,255,255,.1);
+         -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+         transition: background .2s ease, transform .2s ease, border-color .2s ease;
+      }
+      .hero-cta:hover { color: #fff; background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.8); transform: translateY(2px); }
+
+      /* ------------------------------------------------------------------
+         Name + photo row. Stays pinned to the top once you scroll down.
+         --p  : 0 (top of page) -> 1 (fully compact)
+         --q  : 1 - p (used for sizes)
+         --ty : vertical offset in px, set by JS
+      ------------------------------------------------------------------ */
+      .identity {
+         position: absolute;              /* no-JS fallback: scrolls with the page */
+         top: var(--start);
+         left: 0; right: 0;
+         z-index: 50;
+         pointer-events: none;            /* never block clicks on the content underneath */
+         --fg: #fff;
+         --kicker: #bae6fd;
+         --avatar: calc(var(--avatar-small) + (var(--avatar-big) - var(--avatar-small)) * var(--q, 1));
+         --name: calc(var(--name-small) + (var(--name-big) - var(--name-small)) * var(--q, 1));
+      }
+      .js .identity {
+         position: fixed;   /* lives outside the hero so it can sit above the white sheet */
+         top: 0;
+         padding-top: env(safe-area-inset-top, 0px);
+         transform: translate3d(0, var(--ty, var(--start)), 0);
+         will-change: transform;
+      }
+      .identity-row {
+         display: flex;
+         align-items: center;             /* name and photo share the same centre line */
+         justify-content: space-between;
+         gap: clamp(14px, 3vw, 40px);
+         padding-block: calc(24px - 12px * var(--p, 0));
+      }
+      .identity-text { position: relative; min-width: 0; color: var(--fg); transition: color .35s ease; }
+      .kicker {
+         position: absolute; left: 0; bottom: 100%;     /* sits above the name without shifting it */
+         margin: 0 0 clamp(6px, 1.2vw, 12px);
+         opacity: calc(1 - var(--p, 0) * 2.2);
+         font-size: clamp(10px, 1.3vw, 12px);
+         font-weight: 700;
+         letter-spacing: .22em;
+         text-transform: uppercase;
+         color: var(--kicker);
+         white-space: nowrap;
+         transition: color .35s ease;
+      }
+      .identity h1 {
+         margin: 0;
+         font-size: var(--name);
+         line-height: 1.02;
+         letter-spacing: -.045em;
+         font-weight: 800;
+         color: inherit;
+         text-wrap: balance;
+         text-shadow: 0 2px 28px rgba(6,18,32,.35);
+         transition: text-shadow .35s ease;
+      }
+      .avatar {
+         flex: none;
+         display: block;
+         width: var(--avatar);
+         height: var(--avatar);
+         border-radius: 50%;
+         pointer-events: auto;
+         background: #cbd5e1;
+         border: 3px solid rgba(255,255,255,.92);
+         box-shadow: 0 14px 40px rgba(6,18,32,.35), 0 0 0 1px rgba(6,18,32,.08);
+         overflow: hidden;
+         transition: box-shadow .3s ease, transform .3s ease;
+      }
+      .avatar:hover { transform: scale(1.04); box-shadow: 0 18px 48px rgba(6,18,32,.42), 0 0 0 1px rgba(6,18,32,.08); }
+      .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+      /* Over the white page: dark text instead of white */
+      .on-light .identity { --fg: var(--ink); --kicker: var(--accent-deep); }
+      .on-light .identity h1 { text-shadow: none; }
+
+      /* ------------------------------------------------------------------
+         Blur veil: content blends and blurs out behind the name + photo
+      ------------------------------------------------------------------ */
+      .veil { display: none; }
+      .js .veil {
+         display: block;
+         position: fixed; top: 0; left: 0; right: 0;
+         height: calc(var(--avatar-small) + 92px + env(safe-area-inset-top, 0px));
+         z-index: 40;
+         pointer-events: none;
+         opacity: min(1, calc(var(--p, 0) * 1.6));
+      }
+      .veil > * { position: absolute; inset: 0; }
+      .veil-soft {
+         -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+         -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+                 mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+      }
+      .veil-hard {
+         -webkit-backdrop-filter: blur(22px) saturate(160%); backdrop-filter: blur(22px) saturate(160%);
+         -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 85%);
+                 mask-image: linear-gradient(to bottom, #000 45%, transparent 85%);
+      }
+      .veil-tint-light, .veil-tint-dark { transition: opacity .35s ease; }
+      .veil-tint-light {
+         opacity: 0;
+         background: linear-gradient(to bottom, rgba(255,255,255,.86) 0%, rgba(255,255,255,.7) 50%, rgba(255,255,255,0) 100%);
+      }
+      .veil-tint-dark {
+         background: linear-gradient(to bottom, rgba(10,22,34,.62) 0%, rgba(10,22,34,.42) 50%, rgba(10,22,34,0) 100%);
+      }
+      .on-light .veil-tint-light { opacity: 1; }
+      .on-light .veil-tint-dark  { opacity: 0; }
+      @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+         .veil-tint-light { background: linear-gradient(to bottom, rgba(255,255,255,.97), rgba(255,255,255,.9) 60%, rgba(255,255,255,0)); }
+         .veil-tint-dark  { background: linear-gradient(to bottom, rgba(10,22,34,.9), rgba(10,22,34,.7) 60%, rgba(10,22,34,0)); }
+      }
+
+      /* ------------------------------------------------------------------
+         White "sheet" that slides up over the cover
+      ------------------------------------------------------------------ */
+      .sheet {
+         position: relative;
+         z-index: 2;
+         margin-top: calc(var(--sheet-radius) * -1);
+         padding-block: clamp(56px, 8vw, 88px) 40px;
+         border-radius: var(--sheet-radius) var(--sheet-radius) 0 0;
+         background:
+            radial-gradient(900px 340px at 85% -80px, rgba(14,165,233,.10), transparent 70%),
+            radial-gradient(700px 300px at 5% 0, rgba(99,102,241,.07), transparent 70%),
+            #fff;
+         box-shadow: 0 -24px 60px rgba(6,18,32,.22);
+         min-height: 80vh;
+      }
+      section { scroll-margin-top: calc(var(--avatar-small) + 56px); }
+      .section + .section { margin-top: clamp(48px, 7vw, 80px); }
+
+      .eyebrow {
+         display: inline-flex; align-items: center; gap: 10px;
+         margin: 0 0 10px;
+         font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+         color: var(--accent-deep);
+      }
+      .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #0ea5e9, #6366f1); }
+      h2 {
+         margin: 0 0 24px;
+         font-size: clamp(26px, 3.4vw, 36px);
+         line-height: 1.15;
+         letter-spacing: -.03em;
+         font-weight: 800;
+      }
+
+      /* About */
+      .about-text { max-width: 68ch; margin: 0; font-size: clamp(16px, 1.5vw, 18px); color: #26364a; }
+      .about-text a { font-weight: 600; border-bottom: 1px solid rgba(2,132,199,.3); }
+      .about-text a:hover { border-color: currentColor; }
+
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .chips li {
+         padding: 6px 14px; border-radius: 999px;
+         font-size: 13px; font-weight: 600; color: var(--accent-deep);
+         background: var(--accent-soft);
+      }
+
+      .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+      .links a {
+         display: inline-flex; align-items: center; gap: 9px;
+         padding: 10px 18px; border-radius: 999px;
+         font-size: 14px; font-weight: 600; color: var(--ink);
+         background: #fff; border: 1px solid var(--line);
+         box-shadow: 0 1px 2px rgba(15,27,39,.05);
+         transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease;
+      }
+      .links a:hover { color: var(--accent-deep); border-color: #bae6fd; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(2,132,199,.14); }
+      .links i { font-size: 16px; color: var(--accent); }
+
+      /* Project cards */
+      .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }
+      .card {
+         display: flex; flex-direction: column; gap: 14px;
+         padding: clamp(20px, 2.4vw, 28px);
+         background: #fff; border: 1px solid var(--line); border-radius: 20px;
+         box-shadow: 0 1px 2px rgba(15,27,39,.04);
+         transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      }
+      .card:hover { transform: translateY(-4px); border-color: #cfe3f1; box-shadow: 0 18px 40px rgba(15,27,39,.10); }
+      .card h3 { margin: 0; font-size: clamp(17px, 1.6vw, 19px); line-height: 1.35; letter-spacing: -.01em; font-weight: 700; text-wrap: balance; }
+      .card .meta { margin: 0; font-size: 14px; color: var(--muted); }
+      .card .meta strong { color: var(--ink); font-weight: 600; }
+      .card .meta a { font-weight: 500; }
+      .status {
+         align-self: flex-start;
+         margin-top: auto;
+         display: inline-flex; align-items: flex-start; gap: 8px;
+         padding: 7px 13px; border-radius: 12px;
+         font-size: 13px; font-weight: 600; line-height: 1.4;
+      }
+      .status i { margin-top: 3px; font-size: 12px; }
+      .status.accepted { color: #166534; background: #dcfce7; }
+      .status.revision { color: #92400e; background: #fef3c7; }
+
+      /* Footer */
+      .footer { margin: clamp(56px, 8vw, 96px) 0 0; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; font-size: 13px; color: var(--muted); }
+
+      /* Back to top */
+      .back-to-top {
+         position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 60;
+         width: 46px; height: 46px; border: 0; border-radius: 50%;
+         color: #fff; background: #142536; box-shadow: 0 8px 24px rgba(15,23,42,.28);
+         cursor: pointer; opacity: 0; visibility: hidden;
+         transform: translateY(10px);
+         transition: opacity .25s ease, transform .25s ease, visibility .25s, background .2s ease;
+      }
+      .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+      .back-to-top:hover { background: var(--accent-deep); }
+
+      /* ------------------------------------------------------------------
+         Small screens
+      ------------------------------------------------------------------ */
+      @media (max-width: 640px) {
+         :root { --sheet-radius: 26px; }
+         .cover { background-position: 58% center; }
+         .identity h1 { letter-spacing: -.04em; }
+         .kicker { display: none; }
+         .links a { padding: 9px 15px; }
+      }
+
+      /* ------------------------------------------------------------------
+         Reduced motion
+      ------------------------------------------------------------------ */
+      @media (prefers-reduced-motion: reduce) {
+         html { scroll-behavior: auto; }
+         *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+         .cover { transform: none; }
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS48J6H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+
+   <a class="skip-link" href="#about">Skip to content</a>
+
+   <!-- Blurred glass that content melts into, behind the pinned name + photo -->
+   <div class="veil" aria-hidden="true">
+      <div class="veil-soft"></div>
+      <div class="veil-hard"></div>
+      <div class="veil-tint-dark"></div>
+      <div class="veil-tint-light"></div>
+   </div>
+
+   <header class="hero" id="top">
+      <div class="cover" role="img" aria-label="Cover photograph"></div>
+      <div class="hero-anchor" id="heroAnchor"></div>
+
+      <div class="hero-intro">
+         <div class="wrap">
             <p class="hero-subtitle">Researcher exploring learning, representation, and intelligent systems.</p>
-            <a class="hero-scroll-link" href="#profileContent" aria-label="Scroll to profile content">
-               <span>Explore my work</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
-            </a>
+            <a class="hero-cta" href="#about"><span>Explore my work</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
          </div>
-         <div class="hero-profile-wrap" id="heroProfileWrap">
-            <a class="hero-profile-link" href="images/Rakesh_dp.jpg" aria-label="Open profile photo">
-               <img class="hero-profile-photo" src="images/Rakesh_dp.jpg" alt="Rakesh Dey profile photo">
-            </a>
+      </div>
+   </header>
+
+   <!-- Name + photo: same centre line, pinned to the top while scrolling -->
+      <div class="identity" id="identity">
+         <div class="wrap">
+            <div class="identity-row">
+               <div class="identity-text">
+                  <p class="kicker">Machine Learning · Computer Vision</p>
+                  <h1>Rakesh Dey</h1>
+               </div>
+               <a class="avatar" href="images/Rakesh_dp.jpg" aria-label="Open profile photo">
+                  <img src="images/Rakesh_dp.jpg" alt="Rakesh Dey" width="480" height="480" decoding="async" fetchpriority="high">
+               </a>
+            </div>
          </div>
-         <div class="hero-bottom-fade"></div>
-      </header>
-      <div class="profile-transition-spacer" aria-hidden="true"></div>
-      <main id="profileContent" class="profile-content">
+      </div>
 
-      <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom: 0px;margin-top: 0px;">
-         <tbody>
-            <tr style="padding:0px">
-               <td style="padding:0px">
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom: 0px;margin-top: 0px;">
-                     <tbody>
-                        <tr style="padding:0px">
-                           <td style="padding:2.5%;width:63%;vertical-align:middle">
-                              <p style="text-align:center">
-                                 <name>Rakesh Dey</name>
-                              </p>
-                              <p style="text-align:justify">
-                                 <font size="3">
-                                 Currently studyning CS at <a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank"> <font size="3">UBuffalo</font></a>. I spent wonderful time as a Research Associate at  <a href="https://cvpru.isical.ac.in/" target="_blank"> <font size="3">CVPRU</font></a>, the Computer Vision and Pattern Recognition Unit of <a href="https://www.isical.ac.in/" target=" _blank"> <font size="3">Indian Statistical Institute, Kolkata</font></a>, India. I love doing research in computer vision, machine learning and their application in healthcare applications. I am fortunate to have <a href="https://www.isical.ac.in/~umapada/"target="_blank"><font size="3">Prof. Umapada Pal</font></a> as my supervisor at ISI!
-                                 </font>
-                              </p>
-                              <!-- <p align="justify">
-                                 <font size="3">
-                              <p align="justify">Prior to this, I worked as an Independent Researcher, focusing on Computer Vision, Machine Learning and Pattern recognition.
-                              </p> -->
-                              <!-- <p align="justify">
-                                 <font size="3">
-                                    Prior to that, I worked as a System Engineer at <a href="https://www.tcs.com/"><font size="3">Tata Consultancy Services Limited</font></a>.
-                              </p> -->
-                  
-                    <!-- <p align="justify">
-                                 <font size="3">
-                                 Top-venue Conference publications (April 2023): 1 X <b>ICDAR</b>
-                              </p> -->
-                  
-                              <p style="text-align:center">
-                                 <a href="id.rakeshdey@gmail.com"><font size="3"><span><i class="fas fa-envelope"></i></span> Email</font></a> &nbsp/&nbsp
-                                 <a href="data/RakeshDey_CV.pdf"><font size="3"><span><i class="ai ai-cv-square"></i></span> CV</font></a> &nbsp/&nbsp
-                                 <a href="https://www.linkedin.com/in/rakesh-dey-161149179/"><font size="3"><span><i class="fab fa-linkedin"></i></span> LinkedIn</font></a> &nbsp/&nbsp
-                                 <a href="https://github.com/deyRakesh"><font size="3"><span><i class="fab fa-github"></i></span> GitHub</font></a> 
-                                 <!-- <a href="https://scholar.google.com/citations?user=sz1Hu3gAAAAJ&hl=en"><font size="3"><span><i class="ai ai-google-scholar"></i></span> Google Scholar</font></a> &nbsp/&nbsp -->
-                                 <!-- <a href="https://orcid.org/0000-0002-0735-8406"><font size="3"><span><i class="ai ai-orcid"></i></span> ORCiD</font></a> &nbsp/&nbsp -->
-                                 <!-- <a href="https://dblp.org/pid/354/6521.html"><font size="3"><span><i class="ai ai-dblp"></i></span> DBLP</font></a> -->
-                              </p>
-                           </td>
-                           <td style="padding:2.5%;width:30%;max-width:30%">
-                              <a href="images/Rakesh_dp.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Rakesh_dp.jpg" class="hoverZoomLink"></a>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top: 0px;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle;margin-top: 0px;">
-                              <!-- <heading><font size="5">Research Interests</font></heading>
-                              <p align="justify">
-                                 <font size="3">
-                                    I am very passionate about comprehending the theoretical aspects of Generative Modeling, with a specific focus on exploring generation under multi-modal conditions. My research is mainly focused on unraveling the potential of the latent structure of GANs & Diffusion Models. In addition to this, I am also interested in exploring the adversarial attack in self-supervised contrastive learning paradigm directing model robustness. Recently I have been enjoying the exciting world of Reasoning and Alignment of LLMs.
-                              </p>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle">
-                              <heading>
-                                 <font size="5">Recent Updates </font>
-                              </heading> -->
-                              <p>
-                              <!-- <li><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                                 <em style="font-size:14px;"><b>[Mar 2022:]</b> Our paper <a href="https://arxiv.org/abs/2303.15149"><strong>"What Can Human Sketches Do for Object Detection?"</strong></a> has been selected among <strong>12 award candidates</strong>, out of 2360 accepted papers in CVPR 2023.
-                              </li>                        
-                              <li><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                                 <em style="font-size:14px;"><b>[Mar 2022:]</b> <strong>Six</strong> papers in <a href="http://cvpr2023.thecvf.com/"> <strong>CVPR 2023</strong></a>.
-                              </li>                  
-                              <li><em style="font-size:14px;"><b>[Jan 2023:]</b> <a href="https://doi.org/10.1007/s10044-023-01139-x"> One paper</a> in <a href="https://www.springer.com/journal/10044"> Pattern Analysis and Applications</a> (IF - 2.307), Springer.
-                              </li>
-                              <li><em style="font-size:14px;"><b>[Mar 2022:]</b> Two papers in <a href="http://cvpr2022.thecvf.com/"> <strong>CVPR 2022</strong></a>.
-                              </li>
-                              <li><b>[Dec 2021:]</b> <a href="https://doi.org/10.1007/s11042-021-11861-5"> One paper</a> in <a href="https://www.springer.com/journal/11042"> Multimedia Tools & Applications</a> (IF - 2.577), Springer.</li>
-                              <li><b>[Nov 2021:]</b> <a href="https://doi.org/10.1016/j.ins.2021.10.059"> One paper</a> in <a href="https://www.journals.elsevier.com/information-sciences"> Information Sciences</a> (IF - 8.233), Elsevier.</li>
-                              <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1016/j.patrec.2021.01.028"> One paper</a> in <a href="https://www.journals.elsevier.com/pattern-recognition-letters"> Pattern Recognition Letters</a> (IF - 4.757), Elsevier.</li>
-                              <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1007/s11220-020-00325-z"> One paper</a> in <a href="https://www.springer.com/journal/11220"> Sensing and Imaging</a>, Springer.</li> -->
+   <main class="sheet" id="profileContent">
+      <div class="wrap">
 
-                              <!-- <li>
-                                 <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                                 <em style="font-size:14px;"><b>[May 2023:]</b> <a href="https://arxiv.org/abs/2305.00795"><strong>One paper</a></strong> accepted for Oral Presentation in <a href="https://icdar2023.org/"> <strong>ICDAR 2023</strong></a>.</em>
-                              </li>
-                              <li>
-                                 <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                                 <em style="font-size:14px;"><b>[Apr 2023:]</b> <a href="https://arxiv.org/abs/2305.00795"><strong>One paper</a></strong> accepted in <a href="https://icdar2023.org/"> <strong>ICDAR 2023</strong></a>.</em>
-                              </li>
-                              <li>
-                                 <em style="font-size:14px;"><b>[Dec 2017:]</b> <a href="https://ieeexplore.ieee.org/abstract/document/8593100/"> One paper</a> accepted in <a href="https://www.isical.ac.in/~icapr17/">ICAPR 2017</a>.</em>
-                              </li> -->
-                              <!-- <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1007/s11220-020-00325-z"> One paper</a> accepted in <a href="https://www.springer.com/journal/11220"> </a>, Springer.</li> -->
+         <section class="section" id="about" aria-labelledby="about-title">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">Hello, I'm Rakesh.</h2>
+            <p class="about-text">
+               Currently studying CS at <a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank" rel="noopener noreferrer">UBuffalo</a>.
+               I spent a wonderful time as a Research Associate at <a href="https://cvpru.isical.ac.in/" target="_blank" rel="noopener noreferrer">CVPRU</a>,
+               the Computer Vision and Pattern Recognition Unit of <a href="https://www.isical.ac.in/" target="_blank" rel="noopener noreferrer">Indian Statistical Institute, Kolkata</a>, India.
+               I love doing research in computer vision, machine learning and their application in healthcare.
+               I am fortunate to have <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a> as my supervisor at ISI!
+            </p>
 
-                              </p>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:0px;margin-top:0px;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle;margin-bottom:0px;margin-top:0px;">
-                              <heading>
-                                 <font size="5">Selected Publications</font>
-                              </heading> -->
-                              <!-- <p><strong><font size="5">2023</font></strong></p> -->
-                           <!-- </td>
-                        </tr>
-                     </tbody>
-                  </table> -->
-              
-              
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/pictureThatSketch.png' width="160">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <a href="https://arxiv.org/abs/2303.11162">
-                              <papertitle>Picture that Sketch: Photorealistic Image Generation from Abstract Sketches</papertitle>
-                           </a>
-                           <br>
-                           <strong>S. Koley</strong>, AK. Bhunia, A. Sain, PN. Chowdhury, T. Xiang , Y-Z. Song
-                           <br>
-                           <em>In Proc. IEEE Conference on Computer Vision and Pattern Recognition <strong>( CVPR )</strong>, 2023</em> <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                           <br>
-                           <a href="https://arxiv.org/pdf/2303.11162">[PDF]</a>
-                           /
-                           <a href="https://raw.githubusercontent.com/subhadeepkoley/subhadeepkoley.github.io/main/data/koley2023picture.bib">[BibTeX]</a>
-                           /
-                           <a href="https://arxiv.org/abs/2303.11162">[arXiv]</a>
-                           /
-                           <a href="https://subhadeepkoley.github.io/PictureThatSketch/">[Project Page]</a>                   
-                           <p></p>
-                        </td>
-                     </tbody>
-                  </table> -->
+            <ul class="chips" aria-label="Research interests">
+               <li>Machine Learning</li>
+               <li>Computer Vision</li>
+               <li>Pattern Recognition</li>
+               <li>Healthcare Applications</li>
+            </ul>
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/ICPR.png' width="320">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <a href="https://link.springer.com/chapter/10.1007/978-3-031-78195-7_3">
-                              <papertitle>A New StyleGAN Latent Space based Model for Image Style Transfer</papertitle>
-                           </a>
-                           <br>
-                           <strong>Rakesh Dey</strong>, P. Shivakumara, S. Bhattacharya, S. Chanda, U. Pal
-                           <br>
-                           <em>International Conference on Pattern Recognition <strong>(2024)</strong></em><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
-                           <br>
-                           <a href="https://link.springer.com/chapter/10.1007/978-3-031-78195-7_3">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a> -->
-                           <!-- /
-                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/selfdocseg2023.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
-                           / -->
-                           <!-- <a href="https://arxiv.org/abs/2308.02905">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a> -->
-                           <!-- / -->
-                           <!-- <a href="https://github.com/MaitySubhajit/SelfDocSeg/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              -->
-                           <!-- / -->
-                           <!-- <a href="https://maitysubhajit.github.io/SelfDocSeg/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a> -->
-                           <!-- <p></p>
-                        </td>
-                     </tbody>
-                  </table> -->
+            <ul class="links" aria-label="Contact and profiles">
+               <li><a href="mailto:id.rakeshdey@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a></li>
+               <li><a href="data/RakeshDey_CV.pdf"><i class="ai ai-cv-square" aria-hidden="true"></i>CV</a></li>
+               <li><a href="https://www.linkedin.com/in/rakesh-dey-161149179/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+               <li><a href="https://github.com/deyRakesh" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a></li>
+            </ul>
+         </section>
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle">
-                              <p><strong><font size="5">2022</font></strong></p>
-                        </tr>
-                     </tbody>
-                  </table> -->
+         <section class="section" id="research" aria-labelledby="research-title">
+            <p class="eyebrow">Research</p>
+            <h2 id="research-title">Research Projects and Related Publications</h2>
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/TAI.png' width="320">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <a href="https://ieeexplore.ieee.org/document/10820841">
-                              <papertitle>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</papertitle>
-                           </a>
-                           <br>
-                           S. Manna, S, Chattopadhyay, <strong>Rakesh Dey</strong>, S. Bhattacharya, U. Pal
-                           <br>
-                           <em>IEEE Transactions on Artificial Intelligence</em>
-                           <br>
-                           <a href="https://ieeexplore.ieee.org/document/10820841">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a> -->
-                           <!-- <a href="https://arxiv.org/ftp/arxiv/papers/1810/1810.10188.pdf">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
-                           /
-                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityleaf2018.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
-                           /
-                           <a href="https://arxiv.org/abs/1810.10188">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>         -->        
-                           <!-- <p></p>
-                        </td>
-                     </tbody> -->
-                     <!-- <tbody>
-                        <td align="middle">
-                           <img src='images/scl.png' width="320">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <a href="https://deyrakesh.github.io">
-                              <papertitle>Can Entropy Regularization Prevent Dimension Collapse in Spectral Contrastive Learning?</papertitle>
-                           </a>
-                           <br>
-                           <strong>Rakesh Dey</strong>
-                           <br>
-                           <em>Under review</em>
-                           <br> -->
-                           <!-- <a href="https://arxiv.org/ftp/arxiv/papers/1810/1810.10188.pdf">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
-                           /
-                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityleaf2018.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
-                           /
-                           <a href="https://arxiv.org/abs/1810.10188">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>         -->        
-                           <!-- <p></p>
-                        </td>
-                     </tbody> -->
-                  <!-- </table> -->
+            <div class="cards">
+               <article class="card">
+                  <h3>SFTT: A Spatial-Frequency-Temporal-Based End-to-End Transformer for Heart Rate Estimation</h3>
+                  <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
+                  <p class="status revision"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i><span>Acceptance subject to minor revision in IEEE Transactions on Emerging Topics in Computational Intelligence</span></p>
+               </article>
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                     <tr>
-                        <td style="padding:20px;width:100%;vertical-align:middle">
-                           <p><strong><font size="5">2017</font></strong></p>
-                     </tr>
-                  </tbody>
-                  </table>
+               <article class="card">
+                  <h3>Blood Oxygen Saturation Measurement: A Survey</h3>
+                  <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
+                  <p class="status accepted"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Accepted in Artificial Intelligence and Applications</span></p>
+               </article>
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/ImageHash.png' width="160">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <a href="https://ieeexplore.ieee.org/abstract/document/8593100/">
-                              <papertitle>Image Hash Minimization for Tamper Detection</papertitle>
-                           </a>
-                           <br>
-                           <strong>S. Maity</strong>, R. K. Karsh
-                           <br>
-                           <em>In Proc. 9th International Conference on Advances in Pattern Recognition <strong>(ICAPR)</strong>, 2017</em>
-                           <br>
-                           <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593100">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
-                           /
-                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityimagehash2017.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
-                           /
-                           <a href="https://arxiv.org/abs/2305.17748">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>
-                           /
-                           <a href="https://github.com/MaitySubhajit/ImageHashMinimization/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              
-                           /
-                           <a href="https://maitysubhajit.github.io/ImageHashMinimization/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a>
-                           <p></p>
-                        </td>
-                     </tbody>
-                  </table> -->
+               <article class="card">
+                  <h3>A New StyleGAN Latent Space based Model for Image Style Transfer</h3>
+                  <p class="meta"><strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a></p>
+                  <p class="status accepted"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Accepted in International Conference on Pattern Recognition</span></p>
+               </article>
 
-                  <!--Next paper should be listed in bottom of this line -->  
-                  <br>
-                  <br>
-                  <!--Next paper should be listed in bottom of this line -->  
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle">
-                              <heading>
-                                 <font size="5">Research Projects and Related Publications</font>
-                              </heading>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <!--Next paper should be listed in top of this line -->
+               <article class="card">
+                  <h3>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</h3>
+                  <p class="meta"><strong>Supervisors:</strong>
+                     <a href="https://www.isical.ac.in/~umapada/" target="_blank" rel="noopener noreferrer">Prof. Umapada Pal</a>,
+                     <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik" target="_blank" rel="noopener noreferrer">Prof. Saumik Bhattacharya</a>
+                  </p>
+                  <p class="status accepted"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Accepted in IEEE Transactions on Artificial Intelligence</span></p>
+               </article>
+            </div>
+         </section>
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <!-- <td align="middle">
-                           <img src='images/occluted.png' width="160">
-                        </td> -->
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>SFTT: A Spatial-Frequency-Temporal-Based End-to-End Transformer for Heart Rate Estimation</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
-                           <br>
-                           <em>Acceptance subject to minor revision in IEEE Transactions on Emerging Topics in Computational Intelligence</em>
-                        </td>
-                     </tbody>
-                  </table>
+         <footer class="footer">
+            Template credit: <a href="https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Dr. Jon Barron</a>
+         </footer>
+      </div>
+   </main>
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <!-- <td align="middle">
-                           <img src='images/occluted.png' width="160">
-                        </td> -->
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Blood Oxygen Saturation Measurement: A Survey</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
-                           <br>
-                           <em>Accepted in Artificial Intelligence and Applications</em>
-                        </td>
-                     </tbody>
-                  </table>
+   <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <!-- <td align="middle">
-                           <img src='images/occluted.png' width="160">
-                        </td> -->
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>A New StyleGAN Latent Space based Model for Image Style Transfer</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
-                           <br>
-                           <em>Accepted in International Conference in Pattern Recognition</em>
-                        </td>
-                     </tbody>
-                  </table>
+   <script>
+   (() => {
+      'use strict';
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <!-- <td align="middle">
-                           <img src='images/occluted.png' width="160">
-                        </td> -->
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>
-                           <br>
-                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
-                           <br>
-                           <em>Accepted in IEEE Transactions on Artificial Intelligence</em>
-                        </td>
-                     </tbody>
-                  </table>
-                  
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/icra.png' width="160">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Diving into the Depths of Spotting Text in Multi-Domain Noisy Scenes</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a>
-                           <br>
+      const root      = document.documentElement;
+      const identity  = document.getElementById('identity');
+      const anchor    = document.getElementById('heroAnchor');
+      const sheet     = document.getElementById('profileContent');
+      const toTop     = document.getElementById('backToTop');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-                           <strong>Timeline:</strong> January, 2023 – February, 2023
-                           <br>
-                           <a href="https://github.com/MaitySubhajit/SelfDocSeg/">[<span><i class="fab fa-github"></i></span> GitHub]</a>             
-                           /
-                           <a href="https://maitysubhajit.github.io/SelfDocSeg/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a> -->
-                        <!-- </td>
-                     </tbody>
-                  </table>  -->
+      const SHRINK_RANGE = 260;   // px of scrolling over which the name/photo shrink
+      let startPx = 0;            // Y position of the name row at the top of the page
+      let sheetTop = 0;           // document Y of the white sheet's top edge
+      let ticking = false;
+      let lastLight = null;
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/iccv.png' width="160">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Harnessing the Power of Multi-Lingual Datasets for Pre-training: Towards Enhancing Text Spotting Performance</papertitle>
-                           <br>
-                           <strong>Supervisors:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, <a href="http://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Dr. Saumik Bhattacharya</a>
-                           <br>
-                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a>
-                           <br>
-                           <strong>Timeline:</strong> October, 2022 – January, 2023
-                        </td>
-                     </tbody>
-                  </table> -->
+      const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/LPSynth.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Synthetic Scene-Aware Semantics-Agnostic Text Generation</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <strong>Timeline:</strong> July, 2022
-                           <br>
-                           <em>The details of this project will be released soon.</em>
-                        </td>
-                     </tbody>
-                  </table> -->
+      function measure() {
+         startPx  = anchor.offsetTop;
+         sheetTop = sheet.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+         update();
+      }
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/LPR.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Vehicle Detection & Tracking with Speed Estimation & License Plate Recognition</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
-                           <br>
-                           <strong>Timeline:</strong> June, 2022 – May, 2023
-                        </td>
-                     </tbody>
-                  </table> -->
-                  
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/FGSBIR.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Towards Faster Fine-Grained Sketch-based Image Retrieval</papertitle>
-                           <br>
-                           <strong>Mentor:</strong> <a href="https://ayankumarbhunia.github.io/">Dr. Ayan Kumar Bhunia</a>
-                           <br>
-                           <strong>Timeline:</strong> August, 2021 – July, 2022
-                           <br>
-                           <em>The details of this project will be released soon.</em>
-                        </td>
-                     </tbody>
-                  </table> -->
+      function update() {
+         ticking = false;
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/ImageForgery.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Image Forgery Localization with Hashless Strategy</papertitle>
-                           <br>
-                           <strong>Mentor:</strong> <a href="http://ec.nits.ac.in/ram/">Prof. Ram Kumar Karsh</a>
-                           <br>
-                           <strong>Timeline:</strong> January, 2021 – June, 2021
-                        </td>
-                     </tbody>
-                  </table>
+         // Ignore negative values from iOS rubber-band scrolling
+         const y = Math.max(0, window.scrollY || window.pageYOffset || 0);
 
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/actionrecognition.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Human Action Recognition for Activity Monitoring on FPGA</papertitle>
-                           <br>
-                           <strong>Supervisors:</strong> <a href="https://scholar.google.co.in/citations?user=qCzxYPUAAAAJ">Prof. Swagata Mandal</a>, <a>Dr. Satyabrata Maity</a>
-                           <br>
-                           <strong>Timeline:</strong> January, 2021 – August, 2021
-                        </td>
-                     </tbody>
-                  </table> -->
+         const p  = clamp(y / SHRINK_RANGE, 0, 1);
+         const ty = Math.max(0, startPx - y);
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/ImageHash.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Image Forgery Detection using Efficient Image Hash and Signatures</papertitle>
-                           <br>
-                           <strong>Mentor:</strong> <a href="http://ec.nits.ac.in/ram/">Prof. Ram Kumar Karsh</a>
-                           <br>
-                           <strong>Timeline:</strong> July, 2017 – Decemeber, 2017
-                           <br>
-                           <a href="https://github.com/MaitySubhajit/ImageHashMinimization/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              
-                           /
-                           <a href="https://maitysubhajit.github.io/ImageHashMinimization/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a>
-                        </td>
-                     </tbody>
-                  </table> -->
+         root.style.setProperty('--scroll', y.toFixed(1));
+         root.style.setProperty('--p', p.toFixed(4));
+         root.style.setProperty('--q', (1 - p).toFixed(4));
+         root.style.setProperty('--ty', ty.toFixed(1) + 'px');
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/WordSense.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Word Sense Disambiguation using Visual Information</papertitle>
-                           <br>
-                           <strong>Supervisor:</strong> <a href="http://ec.nits.ac.in/kguha/">Prof. Koushik Guha</a>
-                           <br>
-                           <strong>Timeline:</strong> June, 2017 – July, 2017
-                        </td>
-                     </tbody>
-                  </table> -->
-                  
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/leafdisease.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Leaf Disease Detection</papertitle>
-                           <br>
-                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a>Avinaba Tapadar</a>
-                           <br>
-                           <strong>Timeline:</strong> May, 2017 – January, 2018
-                        </td>
-                     </tbody>
-                  </table> -->
+         // Dark text + light glass once white content reaches the name row; white text over the photo
+         const dockedBottom = ty + identity.offsetHeight;
+         const light = (sheetTop - y) < dockedBottom - 6;
+         if (light !== lastLight) {
+            root.classList.toggle('on-light', light);
+            lastLight = light;
+         }
 
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
-                     <tbody>
-                        <td align="middle">
-                           <img src='images/JU.png' width="100">
-                        </td>
-                        <td style="padding:10px;width:75%;vertical-align:middle">
-                           <papertitle>Cross-modal illumination invariant face sketch-photo recognition</papertitle>
-                           <br>
-                           <strong>Supervisors:</strong> <a href="https://sites.google.com/view/hiranmoy-roy/home">Dr. Hiranmoy Roy</a>, <a href="http://www.debotoshbhattacharjee.com/?i=1">Prof. Debotosh Bhattacharjee</a>
-                           <br>
-                           <strong>Timeline:</strong> 2017–2019
-                           <br>
-                           <strong>Institute:</strong> <a href="https://www.rcciit.org/">RCC Institute of Information Technology</a>, <a href="http://www.jaduniv.edu.in/">Jadavpur University</a>
-                        </td>
-                     </tbody>
-                  </table> -->
-                  <!--<hr style="width:95%;text-align:middle;margin-left:auto">-->
-                  <!--Next paper should be listed in top of this line -->
-                  <!-- <br>
-                  <br> -->
-                  <!--Next paper should be listed in bottom of this line -->  
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle">
-                              <heading>
-                                 <font size="5">Professional & Voluntary work </font>
-                              </heading>
-                              <p> -->
-                              <!-- <li> Serving as a reviewer for:</a></li>
-                              <ul>
-                                 <li><a href="https://jivp-eurasipjournals.springeropen.com/"> EURASIP Journal on Image and Video Processing, Springer</a>, 2021-</li>
-                                 <li><a href="https://www.journals.elsevier.com/expert-systems-with-applications"> Expert Systems with Applications, Elsevier</a>, 2021-</li>
-                                 <li><a href="https://www.sciencedirect.com/journal/future-generation-computer-systems"> Future Generation Computer Systems, Elsevier</a>, 2020-</li>
-                                 <li><a href="https://www.journals.elsevier.com/signal-processing"> Signal Processing, Elsevier</a>, 2020-</li>
-                                 <li><a href="https://www.journals.elsevier.com/information-sciences"> Information Sciences, Elsevier</a>, 2022-</li>
-                                 <li><a href="https://www.tandfonline.com/journals/yims20"> The Imaging Science Journal, Taylor & Francis</a>, 2022-</li>
-                                 <li><a href="https://www.frontiersin.org"> Frontiers in Computer Science</a>, 2022-</li>
-                                 <li><a href="https://www.tandfonline.com/journals/ucbs20"> Cybernetics and Systems, Taylor & Francis</a>, 2023-</li>
-             <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34"> IEEE Transactions on Pattern Analysis and Machine Intelligence</a>, 2023-</li>
-                              </ul> -->
-                              <!-- <li> Served as a reviewer for <a href="http://ijaas.iaescore.com"></a>International Journal of Advances in Applied Sciences (IJAAS)</a>.</li>
-                              </p>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table> -->
-                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                     <tbody>
-                        <tr>
-                           <td style="padding:20px;width:100%;vertical-align:middle">
-                              <p><strong><font size="5">Supervisor/Mentor</font></strong></p>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                  <tbody>
-                  <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
-                     <a href="images/umapadapal-circle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%; filter: brightness(0.8) saturate(100%);" alt="profile photo" src="images/umapadapal-circle.png" class="hoverZoomLink"></a>
-                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a> </h4> -->
-                  <!-- <p style="padding: 0 25%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
-                  <!-- </td>
-                  <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
-                     <a href="images/saumikcircle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%; padding-top: 10%;" alt="profile photo" src="images/saumikcircle.png" class="hoverZoomLink"></a>
-                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"> <a href="http://www.iitkgp.ac.in/department/EC/faculty/ec-saumik"> Dr. Saumik Bhattacharya</a> </h4> -->
-                  <!-- <p style="padding: 0 28%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
-                  <!-- </td> -->
-                  <!-- <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
-                     <a href="images/josephcircle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%" alt="profile photo" src="images/josephcircle.png" class="hoverZoomLink"></a>
-                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"><a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a></h4> -->
-                  <!-- <p style="padding: 0 34%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
-                  <!-- </td> -->
-                  <!-- <td style="padding: 2.5% 7% 0 0%;width:20%;max-width:30%">
-                     <a href="images/Rakesh_dp.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%" alt="profile photo" src="images/Rakesh_dp.png" class="hoverZoomLink"></a>
-                     <h4 style="padding: 0 40%;width:70%;max-width:100%; display:flex; align-items: center;">Alloy Das</h4>
-                   <p style="padding: 0 33%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
-                  <!-- </td> --> 
+         toTop.classList.toggle('is-visible', y > 480);
+      }
 
-               </tr>
-            </tbody>
-         </table>
-               </td>
-            </tr>
-         </tbody>
-      </table>
-      <br>
-      <br>
-      <br>
-                  
-      <br>
-      
-      <br>
-      </main>
-      <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
-            <p style="text-align:center">Template Credit: <a href="https://jonbarron.info/"> Dr. Jon Barron</a></p>
+      function requestUpdate() {
+         if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+         }
+      }
 
-      <script>
-         (() => {
-            const backToTop = document.getElementById('backToTop');
-            const hero = document.getElementById('profileHero');
-            const heroContent = hero ? hero.querySelector('.hero-content') : null;
-            const profile = document.getElementById('heroProfileWrap');
-            const content = document.getElementById('profileContent');
-            let ticking = false;
+      window.addEventListener('scroll', requestUpdate, { passive: true });
+      window.addEventListener('resize', measure, { passive: true });
+      window.addEventListener('orientationchange', measure);
+      window.addEventListener('load', measure);
+      window.addEventListener('pageshow', measure);   // back/forward cache restore
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+      if ('ResizeObserver' in window) new ResizeObserver(measure).observe(sheet);
 
-            function updateScrollState() {
-               const y = window.scrollY || 0;
-               backToTop.classList.toggle('is-visible', y > 420);
+      toTop.addEventListener('click', () => {
+         window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      });
 
-               // Move the name and portrait upward together, then freeze them in a glass-like overlay.
-               const progress = Math.min(y / 300, 1);
-               const lift = progress * Math.min(window.innerHeight * 0.10, 78);
-               if (heroContent) {
-                  heroContent.style.top = `calc(${window.innerHeight * 0.3333}px - ${lift}px)`;
-                  heroContent.classList.toggle('is-glass', y > 40);
-               }
-
-               if (profile) {
-                  const startTop = Math.min(window.innerHeight * 0.6667 - 24, window.innerHeight - 140);
-                  const name = heroContent ? heroContent.querySelector('h1') : null;
-                  const freezeTop = name ? name.getBoundingClientRect().top + name.getBoundingClientRect().height / 2 : 120;
-                  const targetTop = startTop + (freezeTop - startTop) * progress;
-                  profile.style.top = `${targetTop}px`;
-                  profile.style.filter = `drop-shadow(0 ${8 + progress * 8}px ${18 + progress * 10}px rgba(15,23,42,.16))`;
-                  profile.style.background = y > 40 ? 'rgba(255,255,255,.52)' : 'rgba(255,255,255,.72)';
-               }
-
-               ticking = false;
-            }
-
-            window.addEventListener('scroll', () => {
-               if (!ticking) {
-                  window.requestAnimationFrame(updateScrollState);
-                  ticking = true;
-               }
-            }, { passive: true });
-
-            backToTop.addEventListener('click', () => {
-               window.scrollTo({
-                  top: 0,
-                  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-               });
-            });
-
-            document.querySelectorAll('.hero-scroll-link').forEach(link => {
-               link.addEventListener('click', event => {
-                  if (content) {
-                     event.preventDefault();
-                     content.scrollIntoView({
-                        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-                     });
-                  }
-               });
-            });
-
-            updateScrollState();
-         })();
-      </script>
-
-   </body>
+      measure();
+   })();
+   </script>
+</body>
 </html>

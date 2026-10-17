@@ -1,0 +1,911 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <meta name="google-site-verification" content="mzyi5h_x1DvmnvvOynztP5h3mA2mdBpUjfhySMB9NNI" />
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NS48J6H');</script>
+      <!-- End Google Tag Manager -->
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Rakesh Dey | Machine Learning Researcher</title>
+      <meta name="author" content="Rakesh Dey  | Machine Learning Researcher & Maths Enthusiast">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+      <!-- <link rel="stylesheet" href="fontawesome.all.min.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="icon" type="image/png" href="images/Rakesh_dp.jpg">
+      <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <!-- Need to change ############## -->
+      <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NS48J6H"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'GTM-NS48J6H');
+      </script> -->
+      <!-- Need to change ############## -->
+
+      <style>
+         :root {
+            --hero-height: 66.666vh;
+            --ink: #17212b;
+            --muted: #536273;
+            --accent: #7dd3fc;
+         }
+         html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+         body { margin: 0; color: var(--ink); background: #fff; }
+         .profile-hero {
+            height: var(--hero-height);
+            min-height: 460px;
+            max-height: 820px;
+            position: sticky;
+            top: 0;
+            isolation: isolate;
+            overflow: visible;
+            color: #fff;
+            background: #142536;
+            z-index: 0;
+         }
+         .cover-photo {
+            position: absolute; inset: 0;
+            background-image:
+               linear-gradient(115deg, rgba(6, 18, 32, .72), rgba(6, 18, 32, .10) 68%),
+               url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=85");
+            background-size: cover;
+            background-position: center 48%;
+            transform: scale(1.02);
+            transition: transform .7s ease;
+            z-index: -2;
+         }
+         .profile-hero:hover .cover-photo { transform: scale(1.045); }
+         .cover-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(0deg, rgba(8, 20, 32, .48), transparent 52%);
+         }
+         .hero-content {
+            position: fixed;
+            left: clamp(28px, 9vw, 140px);
+            top: 33.333vh;
+            transform: translateY(-50%);
+            max-width: min(720px, 62vw);
+            padding: 24px 0 30px;
+            z-index: 12;
+            will-change: top;
+            isolation: isolate;
+         }
+         .hero-content::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: -18px -24px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 26px;
+            background: rgba(255,255,255,.10);
+            backdrop-filter: blur(18px) saturate(150%);
+            -webkit-backdrop-filter: blur(18px) saturate(150%);
+            opacity: 0;
+            transition: opacity .25s ease;
+            pointer-events: none;
+         }
+         .hero-content.is-glass::before { opacity: 1; }
+         .hero-kicker {
+            font-size: 12px; letter-spacing: .22em; font-weight: 700;
+            margin: 0 0 18px; color: #bae6fd;
+         }
+         .hero-content h1 {
+            font-size: clamp(46px, 7vw, 88px); line-height: .98;
+            letter-spacing: -.055em; margin: 0 0 18px; color: #fff;
+            font-weight: 750;
+         }
+         .hero-subtitle {
+            max-width: 540px; margin: 0; color: rgba(255,255,255,.88);
+            font-size: clamp(16px, 2vw, 21px); line-height: 1.65;
+         }
+         .hero-scroll-link {
+            display: inline-flex; align-items: center; gap: 12px;
+            margin-top: 30px; padding: 12px 17px;
+            color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.55);
+            border-radius: 999px; font-size: 14px;
+            background: rgba(255,255,255,.08); backdrop-filter: blur(8px);
+            transition: background .2s ease, transform .2s ease;
+         }
+         .hero-scroll-link:hover { background: rgba(255,255,255,.2); transform: translateY(2px); }
+         .hero-profile-wrap {
+            position: fixed;
+            z-index: 13;
+            width: clamp(118px, 15vw, 190px);
+            aspect-ratio: 1;
+            right: clamp(32px, 9vw, 140px);
+            top: calc(var(--hero-height) - 24px);
+            transform: translateY(-50%);
+            border-radius: 50%;
+            padding: 7px;
+            background: rgba(255,255,255,.72);
+            border: 1px solid rgba(255,255,255,.75);
+            box-shadow: 0 14px 38px rgba(15, 23, 42, .22);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            transition: box-shadow .25s ease, background .25s ease;
+            will-change: top;
+         }
+         .hero-profile-wrap:hover {
+            box-shadow: 0 18px 45px rgba(15, 23, 42, .3);
+            background: rgba(255,255,255,.88);
+         }
+         .hero-profile-link, .hero-profile-photo { display: block; width: 100%; height: 100%; }
+         .hero-profile-photo { object-fit: cover; border-radius: 50%; border: 1px solid #e5e7eb; }
+         .hero-bottom-fade {
+            position: absolute; bottom: -1px; left: 0; right: 0; height: 80px;
+            background: linear-gradient(0deg, rgba(255,255,255,.12), transparent);
+            pointer-events: none;
+         }
+         .profile-transition-spacer {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            pointer-events: none;
+         }
+         .profile-content {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            background: rgba(255,255,255,.96);
+            box-shadow: 0 -18px 45px rgba(12, 24, 36, .08);
+            backdrop-filter: blur(24px) saturate(140%);
+            -webkit-backdrop-filter: blur(24px) saturate(140%);
+            min-height: 100vh;
+         }
+         /* Existing page content remains centered and readable below the new cover. */
+         .profile-content > table:first-of-type { margin-top: 0 !important; }
+         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type {
+            padding-top: 0;
+         }
+         /* The portrait now lives on the cover/content boundary, so avoid a duplicate below. */
+         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type > tbody > tr:first-child > td:nth-child(2) {
+            display: none;
+         }
+         .profile-content name { display: none; }
+         .profile-content > table:first-of-type > tbody > tr > td > table:first-of-type > tbody > tr:first-child > td:first-child {
+            width: 100% !important;
+         }
+         .profile-content table { max-width: 1000px; }
+         .profile-content a { transition: color .18s ease; }
+         .profile-content a:hover { color: #0369a1; }
+         .back-to-top {
+            position: fixed; right: 24px; bottom: 24px; z-index: 20;
+            width: 46px; height: 46px; border: 0; border-radius: 50%;
+            color: #fff; background: #142536; box-shadow: 0 6px 20px rgba(15,23,42,.2);
+            cursor: pointer; opacity: 0; pointer-events: none;
+            transform: translateY(10px); transition: opacity .25s ease, transform .25s ease;
+         }
+         .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+         .back-to-top:hover { background: #075985; }
+         @media (max-width: 640px) {
+            :root { --hero-height: 66.666svh; }
+            .profile-hero { min-height: 500px; }
+            .cover-photo { background-position: 57% center; }
+            .hero-content { left: 20px; right: 20px; top: 29vh; max-width: calc(100vw - 40px); }
+            .hero-content h1 { font-size: clamp(39px, 11vw, 58px); }
+            .hero-subtitle { max-width: 390px; font-size: 15px; }
+            .hero-profile-wrap { right: 22px; width: 112px; top: calc(var(--hero-height) - 12px); }
+            .hero-content::before { inset: -12px -14px; border-radius: 20px; }
+            .back-to-top { right: 16px; bottom: 16px; }
+         }
+         @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+         }
+      </style>
+
+   </head>
+   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS48J6H"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+      <!-- Interactive cover / profile transition -->
+      <header class="profile-hero" id="profileHero">
+         <div class="cover-photo" role="img" aria-label="Cover photograph">
+            <div class="cover-overlay"></div>
+         </div>
+         <div class="hero-content">
+            <p class="hero-kicker">MACHINE LEARNING · COMPUTER VISION</p>
+            <h1>Rakesh Dey</h1>
+            <p class="hero-subtitle">Researcher exploring learning, representation, and intelligent systems.</p>
+            <a class="hero-scroll-link" href="#profileContent" aria-label="Scroll to profile content">
+               <span>Explore my work</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+         </div>
+         <div class="hero-profile-wrap" id="heroProfileWrap">
+            <a class="hero-profile-link" href="images/Rakesh_dp.jpg" aria-label="Open profile photo">
+               <img class="hero-profile-photo" src="images/Rakesh_dp.jpg" alt="Rakesh Dey profile photo">
+            </a>
+         </div>
+         <div class="hero-bottom-fade"></div>
+      </header>
+      <div class="profile-transition-spacer" aria-hidden="true"></div>
+      <main id="profileContent" class="profile-content">
+
+      <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom: 0px;margin-top: 0px;">
+         <tbody>
+            <tr style="padding:0px">
+               <td style="padding:0px">
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom: 0px;margin-top: 0px;">
+                     <tbody>
+                        <tr style="padding:0px">
+                           <td style="padding:2.5%;width:63%;vertical-align:middle">
+                              <p style="text-align:center">
+                                 <name>Rakesh Dey</name>
+                              </p>
+                              <p style="text-align:justify">
+                                 <font size="3">
+                                 Currently studyning CS at <a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank"> <font size="3">UBuffalo</font></a>. I spent wonderful time as a Research Associate at  <a href="https://cvpru.isical.ac.in/" target="_blank"> <font size="3">CVPRU</font></a>, the Computer Vision and Pattern Recognition Unit of <a href="https://www.isical.ac.in/" target=" _blank"> <font size="3">Indian Statistical Institute, Kolkata</font></a>, India. I love doing research in computer vision, machine learning and their application in healthcare applications. I am fortunate to have <a href="https://www.isical.ac.in/~umapada/"target="_blank"><font size="3">Prof. Umapada Pal</font></a> as my supervisor at ISI!
+                                 </font>
+                              </p>
+                              <!-- <p align="justify">
+                                 <font size="3">
+                              <p align="justify">Prior to this, I worked as an Independent Researcher, focusing on Computer Vision, Machine Learning and Pattern recognition.
+                              </p> -->
+                              <!-- <p align="justify">
+                                 <font size="3">
+                                    Prior to that, I worked as a System Engineer at <a href="https://www.tcs.com/"><font size="3">Tata Consultancy Services Limited</font></a>.
+                              </p> -->
+                  
+                    <!-- <p align="justify">
+                                 <font size="3">
+                                 Top-venue Conference publications (April 2023): 1 X <b>ICDAR</b>
+                              </p> -->
+                  
+                              <p style="text-align:center">
+                                 <a href="id.rakeshdey@gmail.com"><font size="3"><span><i class="fas fa-envelope"></i></span> Email</font></a> &nbsp/&nbsp
+                                 <a href="data/RakeshDey_CV.pdf"><font size="3"><span><i class="ai ai-cv-square"></i></span> CV</font></a> &nbsp/&nbsp
+                                 <a href="https://www.linkedin.com/in/rakesh-dey-161149179/"><font size="3"><span><i class="fab fa-linkedin"></i></span> LinkedIn</font></a> &nbsp/&nbsp
+                                 <a href="https://github.com/deyRakesh"><font size="3"><span><i class="fab fa-github"></i></span> GitHub</font></a> 
+                                 <!-- <a href="https://scholar.google.com/citations?user=sz1Hu3gAAAAJ&hl=en"><font size="3"><span><i class="ai ai-google-scholar"></i></span> Google Scholar</font></a> &nbsp/&nbsp -->
+                                 <!-- <a href="https://orcid.org/0000-0002-0735-8406"><font size="3"><span><i class="ai ai-orcid"></i></span> ORCiD</font></a> &nbsp/&nbsp -->
+                                 <!-- <a href="https://dblp.org/pid/354/6521.html"><font size="3"><span><i class="ai ai-dblp"></i></span> DBLP</font></a> -->
+                              </p>
+                           </td>
+                           <td style="padding:2.5%;width:30%;max-width:30%">
+                              <a href="images/Rakesh_dp.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Rakesh_dp.jpg" class="hoverZoomLink"></a>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top: 0px;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle;margin-top: 0px;">
+                              <!-- <heading><font size="5">Research Interests</font></heading>
+                              <p align="justify">
+                                 <font size="3">
+                                    I am very passionate about comprehending the theoretical aspects of Generative Modeling, with a specific focus on exploring generation under multi-modal conditions. My research is mainly focused on unraveling the potential of the latent structure of GANs & Diffusion Models. In addition to this, I am also interested in exploring the adversarial attack in self-supervised contrastive learning paradigm directing model robustness. Recently I have been enjoying the exciting world of Reasoning and Alignment of LLMs.
+                              </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle">
+                              <heading>
+                                 <font size="5">Recent Updates </font>
+                              </heading> -->
+                              <p>
+                              <!-- <li><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                                 <em style="font-size:14px;"><b>[Mar 2022:]</b> Our paper <a href="https://arxiv.org/abs/2303.15149"><strong>"What Can Human Sketches Do for Object Detection?"</strong></a> has been selected among <strong>12 award candidates</strong>, out of 2360 accepted papers in CVPR 2023.
+                              </li>                        
+                              <li><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                                 <em style="font-size:14px;"><b>[Mar 2022:]</b> <strong>Six</strong> papers in <a href="http://cvpr2023.thecvf.com/"> <strong>CVPR 2023</strong></a>.
+                              </li>                  
+                              <li><em style="font-size:14px;"><b>[Jan 2023:]</b> <a href="https://doi.org/10.1007/s10044-023-01139-x"> One paper</a> in <a href="https://www.springer.com/journal/10044"> Pattern Analysis and Applications</a> (IF - 2.307), Springer.
+                              </li>
+                              <li><em style="font-size:14px;"><b>[Mar 2022:]</b> Two papers in <a href="http://cvpr2022.thecvf.com/"> <strong>CVPR 2022</strong></a>.
+                              </li>
+                              <li><b>[Dec 2021:]</b> <a href="https://doi.org/10.1007/s11042-021-11861-5"> One paper</a> in <a href="https://www.springer.com/journal/11042"> Multimedia Tools & Applications</a> (IF - 2.577), Springer.</li>
+                              <li><b>[Nov 2021:]</b> <a href="https://doi.org/10.1016/j.ins.2021.10.059"> One paper</a> in <a href="https://www.journals.elsevier.com/information-sciences"> Information Sciences</a> (IF - 8.233), Elsevier.</li>
+                              <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1016/j.patrec.2021.01.028"> One paper</a> in <a href="https://www.journals.elsevier.com/pattern-recognition-letters"> Pattern Recognition Letters</a> (IF - 4.757), Elsevier.</li>
+                              <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1007/s11220-020-00325-z"> One paper</a> in <a href="https://www.springer.com/journal/11220"> Sensing and Imaging</a>, Springer.</li> -->
+
+                              <!-- <li>
+                                 <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                                 <em style="font-size:14px;"><b>[May 2023:]</b> <a href="https://arxiv.org/abs/2305.00795"><strong>One paper</a></strong> accepted for Oral Presentation in <a href="https://icdar2023.org/"> <strong>ICDAR 2023</strong></a>.</em>
+                              </li>
+                              <li>
+                                 <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                                 <em style="font-size:14px;"><b>[Apr 2023:]</b> <a href="https://arxiv.org/abs/2305.00795"><strong>One paper</a></strong> accepted in <a href="https://icdar2023.org/"> <strong>ICDAR 2023</strong></a>.</em>
+                              </li>
+                              <li>
+                                 <em style="font-size:14px;"><b>[Dec 2017:]</b> <a href="https://ieeexplore.ieee.org/abstract/document/8593100/"> One paper</a> accepted in <a href="https://www.isical.ac.in/~icapr17/">ICAPR 2017</a>.</em>
+                              </li> -->
+                              <!-- <li> <b>[Jan 2021:]</b> <a href="https://doi.org/10.1007/s11220-020-00325-z"> One paper</a> accepted in <a href="https://www.springer.com/journal/11220"> </a>, Springer.</li> -->
+
+                              </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:0px;margin-top:0px;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle;margin-bottom:0px;margin-top:0px;">
+                              <heading>
+                                 <font size="5">Selected Publications</font>
+                              </heading> -->
+                              <!-- <p><strong><font size="5">2023</font></strong></p> -->
+                           <!-- </td>
+                        </tr>
+                     </tbody>
+                  </table> -->
+              
+              
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/pictureThatSketch.png' width="160">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <a href="https://arxiv.org/abs/2303.11162">
+                              <papertitle>Picture that Sketch: Photorealistic Image Generation from Abstract Sketches</papertitle>
+                           </a>
+                           <br>
+                           <strong>S. Koley</strong>, AK. Bhunia, A. Sain, PN. Chowdhury, T. Xiang , Y-Z. Song
+                           <br>
+                           <em>In Proc. IEEE Conference on Computer Vision and Pattern Recognition <strong>( CVPR )</strong>, 2023</em> <a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                           <br>
+                           <a href="https://arxiv.org/pdf/2303.11162">[PDF]</a>
+                           /
+                           <a href="https://raw.githubusercontent.com/subhadeepkoley/subhadeepkoley.github.io/main/data/koley2023picture.bib">[BibTeX]</a>
+                           /
+                           <a href="https://arxiv.org/abs/2303.11162">[arXiv]</a>
+                           /
+                           <a href="https://subhadeepkoley.github.io/PictureThatSketch/">[Project Page]</a>                   
+                           <p></p>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/ICPR.png' width="320">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <a href="https://link.springer.com/chapter/10.1007/978-3-031-78195-7_3">
+                              <papertitle>A New StyleGAN Latent Space based Model for Image Style Transfer</papertitle>
+                           </a>
+                           <br>
+                           <strong>Rakesh Dey</strong>, P. Shivakumara, S. Bhattacharya, S. Chanda, U. Pal
+                           <br>
+                           <em>International Conference on Pattern Recognition <strong>(2024)</strong></em><a class="button" style="color:#FFFFFF"><strong style="font-size:12px"> New! </strong></a>
+                           <br>
+                           <a href="https://link.springer.com/chapter/10.1007/978-3-031-78195-7_3">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a> -->
+                           <!-- /
+                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/selfdocseg2023.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
+                           / -->
+                           <!-- <a href="https://arxiv.org/abs/2308.02905">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a> -->
+                           <!-- / -->
+                           <!-- <a href="https://github.com/MaitySubhajit/SelfDocSeg/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              -->
+                           <!-- / -->
+                           <!-- <a href="https://maitysubhajit.github.io/SelfDocSeg/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a> -->
+                           <!-- <p></p>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle">
+                              <p><strong><font size="5">2022</font></strong></p>
+                        </tr>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/TAI.png' width="320">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <a href="https://ieeexplore.ieee.org/document/10820841">
+                              <papertitle>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</papertitle>
+                           </a>
+                           <br>
+                           S. Manna, S, Chattopadhyay, <strong>Rakesh Dey</strong>, S. Bhattacharya, U. Pal
+                           <br>
+                           <em>IEEE Transactions on Artificial Intelligence</em>
+                           <br>
+                           <a href="https://ieeexplore.ieee.org/document/10820841">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a> -->
+                           <!-- <a href="https://arxiv.org/ftp/arxiv/papers/1810/1810.10188.pdf">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
+                           /
+                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityleaf2018.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
+                           /
+                           <a href="https://arxiv.org/abs/1810.10188">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>         -->        
+                           <!-- <p></p>
+                        </td>
+                     </tbody> -->
+                     <!-- <tbody>
+                        <td align="middle">
+                           <img src='images/scl.png' width="320">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <a href="https://deyrakesh.github.io">
+                              <papertitle>Can Entropy Regularization Prevent Dimension Collapse in Spectral Contrastive Learning?</papertitle>
+                           </a>
+                           <br>
+                           <strong>Rakesh Dey</strong>
+                           <br>
+                           <em>Under review</em>
+                           <br> -->
+                           <!-- <a href="https://arxiv.org/ftp/arxiv/papers/1810/1810.10188.pdf">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
+                           /
+                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityleaf2018.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
+                           /
+                           <a href="https://arxiv.org/abs/1810.10188">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>         -->        
+                           <!-- <p></p>
+                        </td>
+                     </tbody> -->
+                  <!-- </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="padding:20px;width:100%;vertical-align:middle">
+                           <p><strong><font size="5">2017</font></strong></p>
+                     </tr>
+                  </tbody>
+                  </table>
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/ImageHash.png' width="160">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <a href="https://ieeexplore.ieee.org/abstract/document/8593100/">
+                              <papertitle>Image Hash Minimization for Tamper Detection</papertitle>
+                           </a>
+                           <br>
+                           <strong>S. Maity</strong>, R. K. Karsh
+                           <br>
+                           <em>In Proc. 9th International Conference on Advances in Pattern Recognition <strong>(ICAPR)</strong>, 2017</em>
+                           <br>
+                           <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593100">[<span><i class="fas fa-file-pdf"></i></span> PDF]</a>
+                           /
+                           <a href="https://raw.githubusercontent.com/MaitySubhajit/maitysubhajit.github.io/main/data/maityimagehash2017.bib">[<span><i class="fas fa-quote-left"></i></span> BibTeX]</a>
+                           /
+                           <a href="https://arxiv.org/abs/2305.17748">[<span><i class="ai ai-arxiv"></i></span> arXiv]</a>
+                           /
+                           <a href="https://github.com/MaitySubhajit/ImageHashMinimization/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              
+                           /
+                           <a href="https://maitysubhajit.github.io/ImageHashMinimization/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a>
+                           <p></p>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!--Next paper should be listed in bottom of this line -->  
+                  <br>
+                  <br>
+                  <!--Next paper should be listed in bottom of this line -->  
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle">
+                              <heading>
+                                 <font size="5">Research Projects and Related Publications</font>
+                              </heading>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <!--Next paper should be listed in top of this line -->
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <!-- <td align="middle">
+                           <img src='images/occluted.png' width="160">
+                        </td> -->
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>SFTT: A Spatial-Frequency-Temporal-Based End-to-End Transformer for Heart Rate Estimation</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
+                           <br>
+                           <em>Acceptance subject to minor revision in IEEE Transactions on Emerging Topics in Computational Intelligence</em>
+                        </td>
+                     </tbody>
+                  </table>
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <!-- <td align="middle">
+                           <img src='images/occluted.png' width="160">
+                        </td> -->
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Blood Oxygen Saturation Measurement: A Survey</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
+                           <br>
+                           <em>Accepted in Artificial Intelligence and Applications</em>
+                        </td>
+                     </tbody>
+                  </table>
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <!-- <td align="middle">
+                           <img src='images/occluted.png' width="160">
+                        </td> -->
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>A New StyleGAN Latent Space based Model for Image Style Transfer</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
+                           <br>
+                           <em>Accepted in International Conference in Pattern Recognition</em>
+                        </td>
+                     </tbody>
+                  </table>
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <!-- <td align="middle">
+                           <img src='images/occluted.png' width="160">
+                        </td> -->
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Dynamically Scaled Temperature in Self-Supervised Contrastive Learning</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>
+                           <br>
+                           <!-- <strong>Timeline:</strong> January, 2023 - October, 2023 -->
+                           <br>
+                           <em>Accepted in IEEE Transactions on Artificial Intelligence</em>
+                        </td>
+                     </tbody>
+                  </table>
+                  
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/icra.png' width="160">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Diving into the Depths of Spotting Text in Multi-Domain Noisy Scenes</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a>
+                           <br>
+
+                           <strong>Timeline:</strong> January, 2023 – February, 2023
+                           <br>
+                           <a href="https://github.com/MaitySubhajit/SelfDocSeg/">[<span><i class="fab fa-github"></i></span> GitHub]</a>             
+                           /
+                           <a href="https://maitysubhajit.github.io/SelfDocSeg/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a> -->
+                        <!-- </td>
+                     </tbody>
+                  </table>  -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/iccv.png' width="160">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Harnessing the Power of Multi-Lingual Datasets for Pre-training: Towards Enhancing Text Spotting Performance</papertitle>
+                           <br>
+                           <strong>Supervisors:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, <a href="http://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Dr. Saumik Bhattacharya</a>
+                           <br>
+                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a>
+                           <br>
+                           <strong>Timeline:</strong> October, 2022 – January, 2023
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/LPSynth.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Synthetic Scene-Aware Semantics-Agnostic Text Generation</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <strong>Timeline:</strong> July, 2022
+                           <br>
+                           <em>The details of this project will be released soon.</em>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/LPR.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Vehicle Detection & Tracking with Speed Estimation & License Plate Recognition</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>
+                           <br>
+                           <strong>Timeline:</strong> June, 2022 – May, 2023
+                        </td>
+                     </tbody>
+                  </table> -->
+                  
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/FGSBIR.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Towards Faster Fine-Grained Sketch-based Image Retrieval</papertitle>
+                           <br>
+                           <strong>Mentor:</strong> <a href="https://ayankumarbhunia.github.io/">Dr. Ayan Kumar Bhunia</a>
+                           <br>
+                           <strong>Timeline:</strong> August, 2021 – July, 2022
+                           <br>
+                           <em>The details of this project will be released soon.</em>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/ImageForgery.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Image Forgery Localization with Hashless Strategy</papertitle>
+                           <br>
+                           <strong>Mentor:</strong> <a href="http://ec.nits.ac.in/ram/">Prof. Ram Kumar Karsh</a>
+                           <br>
+                           <strong>Timeline:</strong> January, 2021 – June, 2021
+                        </td>
+                     </tbody>
+                  </table>
+
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/actionrecognition.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Human Action Recognition for Activity Monitoring on FPGA</papertitle>
+                           <br>
+                           <strong>Supervisors:</strong> <a href="https://scholar.google.co.in/citations?user=qCzxYPUAAAAJ">Prof. Swagata Mandal</a>, <a>Dr. Satyabrata Maity</a>
+                           <br>
+                           <strong>Timeline:</strong> January, 2021 – August, 2021
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/ImageHash.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Image Forgery Detection using Efficient Image Hash and Signatures</papertitle>
+                           <br>
+                           <strong>Mentor:</strong> <a href="http://ec.nits.ac.in/ram/">Prof. Ram Kumar Karsh</a>
+                           <br>
+                           <strong>Timeline:</strong> July, 2017 – Decemeber, 2017
+                           <br>
+                           <a href="https://github.com/MaitySubhajit/ImageHashMinimization/">[<span><i class="fab fa-github"></i></span> GitHub]</a>              
+                           /
+                           <a href="https://maitysubhajit.github.io/ImageHashMinimization/">[<span><i class="fas fa-scroll"></i></span> Project Page]</a>
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/WordSense.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Word Sense Disambiguation using Visual Information</papertitle>
+                           <br>
+                           <strong>Supervisor:</strong> <a href="http://ec.nits.ac.in/kguha/">Prof. Koushik Guha</a>
+                           <br>
+                           <strong>Timeline:</strong> June, 2017 – July, 2017
+                        </td>
+                     </tbody>
+                  </table> -->
+                  
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/leafdisease.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Leaf Disease Detection</papertitle>
+                           <br>
+                           <strong>Collaborators:</strong> <a href="https://www.linkedin.com/in/sanketbiswas/">Sanket Biswas</a>, <a>Avinaba Tapadar</a>
+                           <br>
+                           <strong>Timeline:</strong> May, 2017 – January, 2018
+                        </td>
+                     </tbody>
+                  </table> -->
+
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:0px;margin-left:0px;background-color:#ffffff">
+                     <tbody>
+                        <td align="middle">
+                           <img src='images/JU.png' width="100">
+                        </td>
+                        <td style="padding:10px;width:75%;vertical-align:middle">
+                           <papertitle>Cross-modal illumination invariant face sketch-photo recognition</papertitle>
+                           <br>
+                           <strong>Supervisors:</strong> <a href="https://sites.google.com/view/hiranmoy-roy/home">Dr. Hiranmoy Roy</a>, <a href="http://www.debotoshbhattacharjee.com/?i=1">Prof. Debotosh Bhattacharjee</a>
+                           <br>
+                           <strong>Timeline:</strong> 2017–2019
+                           <br>
+                           <strong>Institute:</strong> <a href="https://www.rcciit.org/">RCC Institute of Information Technology</a>, <a href="http://www.jaduniv.edu.in/">Jadavpur University</a>
+                        </td>
+                     </tbody>
+                  </table> -->
+                  <!--<hr style="width:95%;text-align:middle;margin-left:auto">-->
+                  <!--Next paper should be listed in top of this line -->
+                  <!-- <br>
+                  <br> -->
+                  <!--Next paper should be listed in bottom of this line -->  
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle">
+                              <heading>
+                                 <font size="5">Professional & Voluntary work </font>
+                              </heading>
+                              <p> -->
+                              <!-- <li> Serving as a reviewer for:</a></li>
+                              <ul>
+                                 <li><a href="https://jivp-eurasipjournals.springeropen.com/"> EURASIP Journal on Image and Video Processing, Springer</a>, 2021-</li>
+                                 <li><a href="https://www.journals.elsevier.com/expert-systems-with-applications"> Expert Systems with Applications, Elsevier</a>, 2021-</li>
+                                 <li><a href="https://www.sciencedirect.com/journal/future-generation-computer-systems"> Future Generation Computer Systems, Elsevier</a>, 2020-</li>
+                                 <li><a href="https://www.journals.elsevier.com/signal-processing"> Signal Processing, Elsevier</a>, 2020-</li>
+                                 <li><a href="https://www.journals.elsevier.com/information-sciences"> Information Sciences, Elsevier</a>, 2022-</li>
+                                 <li><a href="https://www.tandfonline.com/journals/yims20"> The Imaging Science Journal, Taylor & Francis</a>, 2022-</li>
+                                 <li><a href="https://www.frontiersin.org"> Frontiers in Computer Science</a>, 2022-</li>
+                                 <li><a href="https://www.tandfonline.com/journals/ucbs20"> Cybernetics and Systems, Taylor & Francis</a>, 2023-</li>
+             <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34"> IEEE Transactions on Pattern Analysis and Machine Intelligence</a>, 2023-</li>
+                              </ul> -->
+                              <!-- <li> Served as a reviewer for <a href="http://ijaas.iaescore.com"></a>International Journal of Advances in Applied Sciences (IJAAS)</a>.</li>
+                              </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table> -->
+                  <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                     <tbody>
+                        <tr>
+                           <td style="padding:20px;width:100%;vertical-align:middle">
+                              <p><strong><font size="5">Supervisor/Mentor</font></strong></p>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                  <tbody>
+                  <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
+                     <a href="images/umapadapal-circle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%; filter: brightness(0.8) saturate(100%);" alt="profile photo" src="images/umapadapal-circle.png" class="hoverZoomLink"></a>
+                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"> <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a> </h4> -->
+                  <!-- <p style="padding: 0 25%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
+                  <!-- </td>
+                  <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
+                     <a href="images/saumikcircle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%; padding-top: 10%;" alt="profile photo" src="images/saumikcircle.png" class="hoverZoomLink"></a>
+                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"> <a href="http://www.iitkgp.ac.in/department/EC/faculty/ec-saumik"> Dr. Saumik Bhattacharya</a> </h4> -->
+                  <!-- <p style="padding: 0 28%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
+                  <!-- </td> -->
+                  <!-- <td style="padding: 2.5% 7% 0 0;width:20%;max-width:30%">
+                     <a href="images/josephcircle.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%" alt="profile photo" src="images/josephcircle.png" class="hoverZoomLink"></a>
+                     <h4 style="padding: 0 35%;width:70%;max-width:100%; display:flex; align-items: center;"><a href="http://www.cvc.uab.es/team/?action=profile&id=379">Prof. Josep Lladós</a></h4> -->
+                  <!-- <p style="padding: 0 34%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
+                  <!-- </td> -->
+                  <!-- <td style="padding: 2.5% 7% 0 0%;width:20%;max-width:30%">
+                     <a href="images/Rakesh_dp.png"><img style="width:80%;max-width:100%; padding-left: 20%; padding-right: 3%" alt="profile photo" src="images/Rakesh_dp.png" class="hoverZoomLink"></a>
+                     <h4 style="padding: 0 40%;width:70%;max-width:100%; display:flex; align-items: center;">Alloy Das</h4>
+                   <p style="padding: 0 33%;width:70%;max-width:100%; display: flex;">Lorem ipsum dolor sit amet.</p> -->
+                  <!-- </td> --> 
+
+               </tr>
+            </tbody>
+         </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+                  
+      <br>
+      
+      <br>
+      </main>
+      <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+            <p style="text-align:center">Template Credit: <a href="https://jonbarron.info/"> Dr. Jon Barron</a></p>
+
+      <script>
+         (() => {
+            const backToTop = document.getElementById('backToTop');
+            const hero = document.getElementById('profileHero');
+            const heroContent = hero ? hero.querySelector('.hero-content') : null;
+            const profile = document.getElementById('heroProfileWrap');
+            const content = document.getElementById('profileContent');
+            let ticking = false;
+
+            function updateScrollState() {
+               const y = window.scrollY || 0;
+               backToTop.classList.toggle('is-visible', y > 420);
+
+               // Move the name and portrait upward together, then freeze them in a glass-like overlay.
+               const progress = Math.min(y / 300, 1);
+               const lift = progress * Math.min(window.innerHeight * 0.10, 78);
+               if (heroContent) {
+                  heroContent.style.top = `calc(${window.innerHeight * 0.3333}px - ${lift}px)`;
+                  heroContent.classList.toggle('is-glass', y > 40);
+               }
+
+               if (profile) {
+                  const startTop = Math.min(window.innerHeight * 0.6667 - 24, window.innerHeight - 140);
+                  const name = heroContent ? heroContent.querySelector('h1') : null;
+                  const freezeTop = name ? name.getBoundingClientRect().top + name.getBoundingClientRect().height / 2 : 120;
+                  const targetTop = startTop + (freezeTop - startTop) * progress;
+                  profile.style.top = `${targetTop}px`;
+                  profile.style.filter = `drop-shadow(0 ${8 + progress * 8}px ${18 + progress * 10}px rgba(15,23,42,.16))`;
+                  profile.style.background = y > 40 ? 'rgba(255,255,255,.52)' : 'rgba(255,255,255,.72)';
+               }
+
+               ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+               if (!ticking) {
+                  window.requestAnimationFrame(updateScrollState);
+                  ticking = true;
+               }
+            }, { passive: true });
+
+            backToTop.addEventListener('click', () => {
+               window.scrollTo({
+                  top: 0,
+                  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+               });
+            });
+
+            document.querySelectorAll('.hero-scroll-link').forEach(link => {
+               link.addEventListener('click', event => {
+                  if (content) {
+                     event.preventDefault();
+                     content.scrollIntoView({
+                        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+                     });
+                  }
+               });
+            });
+
+            updateScrollState();
+         })();
+      </script>
+
+   </body>
+</html>
